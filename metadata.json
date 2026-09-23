@@ -1,0 +1,9 @@
+{
+  "name": "SHIFT — Executive AI Summit",
+  "description": "A one-day executive summit convening enterprise founders, c-level strategists, and machine intelligence architects with the next generation of builders.",
+  "prompt": "This app was imported from GitHub repository Amen-krifi/SHIFT_EVENT.",
+  "permissions": [],
+  "capabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

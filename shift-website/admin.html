@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>SHIFT — Admin</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@500;600&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com"></script>
+<script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "on-secondary-container": "#b3b8c7", "primary-fixed-dim": "#b2d42b", "on-surface": "#e1e2eb", "outline": "#8f937c", "glow-lime": "rgba(217, 253, 83, 0.15)", "primary-fixed": "#cdf148", "outline-variant": "#454935", "surface-card-hover": "#1A2230", "surface-container-low": "#191c22", "surface-tint": "#b2d42b", "on-primary-fixed-variant": "#3e4c00", "text-primary": "#FFFFFF", "on-tertiary": "#2f2f3d", "glow-lime-subtle": "rgba(217, 253, 83, 0.05)", "tertiary-fixed": "#e3e0f3", "secondary": "#c1c6d5", "surface-container": "#1d2026", "inverse-primary": "#536600", "on-primary-container": "#586c00", "surface-border": "#1F2837", "surface-variant": "#32353c", "surface-container-highest": "#32353c", "on-tertiary-container": "#646373", "on-surface-variant": "#c5c9af", "inverse-surface": "#e1e2eb", "inverse-on-surface": "#2e3037", "primary-container": "#cdf148", "secondary-container": "#434956", "on-secondary-fixed-variant": "#414753", "surface-container-high": "#272a31", "surface-border-active": "#2E3C52", "tertiary": "#ffffff", "on-error-container": "#ffdad6", "on-tertiary-fixed": "#1a1a27", "on-secondary-fixed": "#161c27", "on-primary": "#2a3500", "surface-bright": "#363940", "background": "#10131a", "tertiary-container": "#e3e0f3", "on-secondary": "#2b313c", "surface": "#10131a", "error": "#ffb4ab", "error-container": "#93000a", "text-muted": "#9CA3AF", "surface-card": "#121721", "secondary-fixed-dim": "#c1c6d5", "surface-dim": "#10131a", "on-error": "#690005", "secondary-fixed": "#dde2f2", "on-primary-fixed": "#171e00", "on-tertiary-fixed-variant": "#464554", "on-background": "#e1e2eb", "primary": "#ffffff", "tertiary-fixed-dim": "#c7c4d7", "surface-container-lowest": "#0b0e14" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "space-lg": "1.5rem", "gutter-mobile": "1rem", "space-md": "1rem", "space-3xl": "6rem", "space-sm": "0.5rem", "margin": "3rem", "space-xs": "0.25rem", "margin-mobile": "1.25rem", "space-xl": "2.5rem", "space-2xl": "4rem", "gutter": "1.5rem" }, "fontFamily": { "body-sm": [ "Inter" ], "headline-lg": [ "Plus Jakarta Sans" ], "headline-xl": [ "Plus Jakarta Sans" ], "label-code": [ "JetBrains Mono" ], "kicker": [ "JetBrains Mono" ], "label-badge": [ "JetBrains Mono" ], "headline-sm": [ "Plus Jakarta Sans" ], "body-md": [ "Inter" ], "body-lg": [ "Inter" ] }, "fontSize": { "body-sm": [ "13px", { "lineHeight": "20px", "fontWeight": "400" } ], "headline-lg": [ "28px", { "lineHeight": "36px", "letterSpacing": "-0.02em", "fontWeight": "700" } ], "headline-sm": [ "20px", { "lineHeight": "28px", "letterSpacing": "-0.01em", "fontWeight": "600" } ], "body-md": [ "15px", { "lineHeight": "24px", "fontWeight": "400" } ], "body-lg": [ "18px", { "lineHeight": "28px", "fontWeight": "400" } ], "label-code": [ "12px", { "lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "500" } ], "kicker": [ "11px", { "lineHeight": "16px", "letterSpacing": "0.12em", "fontWeight": "600" } ], "label-badge": [ "11px", { "lineHeight": "14px", "letterSpacing": "0.08em", "fontWeight": "600" } ] } } } };</script>
+<style>
+  body { margin:0; }
+  ::-webkit-scrollbar { display:none; }
+  .tab-btn.active { color:#fff; background:#1A2230; }
+  .tab-panel { display:none; }
+  .tab-panel.active { display:block; }
+  input[type=text], input[type=email], input[type=tel], input[type=password], input[type=number], textarea, select {
+    width:100%; background:#0b0e14; color:#fff; border:1px solid #1F2837; border-radius:0.5rem; padding:0.5rem 0.75rem; font-size:14px;
+  }
+  input:focus, textarea:focus, select:focus { outline:2px solid #D9FD53; outline-offset:1px; }
+  label.field-label { font-family:'JetBrains Mono',monospace; font-size:11px; text-transform:uppercase; color:#9CA3AF; letter-spacing:0.05em; }
+</style>
+</head>
+<body class="bg-surface-container-lowest text-on-surface font-body-md text-body-md antialiased min-h-screen">
+
+<!-- ============================ LOGIN VIEW ============================ -->
+<div class="min-h-screen w-full flex items-center justify-center px-4" id="login-view">
+  <div class="w-full max-w-sm bg-surface-card border border-surface-border rounded-xl p-8 flex flex-col gap-4">
+    <div class="flex flex-col mb-2">
+      <span class="font-headline-sm text-headline-sm text-text-primary font-extrabold">SHIFT<span class="text-primary-container">.</span></span>
+      <span class="font-kicker text-kicker text-text-muted uppercase tracking-widest">Admin Console</span>
+    </div>
+    <form id="login-form" class="flex flex-col gap-3">
+      <div class="flex flex-col gap-1">
+        <label class="field-label">Email</label>
+        <input id="login-email" type="email" required placeholder="you@aiesec.net"/>
+      </div>
+      <div class="flex flex-col gap-1">
+        <label class="field-label">Password</label>
+        <input id="login-password" type="password" required placeholder="••••••••"/>
+      </div>
+      <button type="submit" class="mt-2 w-full py-2.5 rounded-full bg-primary-container text-on-primary font-headline-sm text-body-md font-bold hover:shadow-[0_0_20px_rgba(205,241,72,0.4)] transition-all">
+        Sign in
+      </button>
+      <div class="relative flex items-center justify-center my-1">
+        <div class="border-t border-surface-border w-full"></div>
+        <span class="bg-surface-card px-2 text-[11px] font-label-code text-text-muted uppercase tracking-wider">or</span>
+      </div>
+      <button type="button" id="preview-admin-btn" class="w-full py-2.5 rounded-full bg-surface-container hover:bg-surface-container-high border border-surface-border text-text-primary font-label-code text-xs uppercase flex items-center justify-center gap-2 transition-all">
+        <span class="material-symbols-outlined text-primary-container text-[18px]">visibility</span>
+        <span>Enter Organizer Preview</span>
+      </button>
+      <p id="login-error" class="text-error text-body-sm hidden"></p>
+    </form>
+    <a href="/index.html" class="text-center font-label-code text-xs text-text-muted hover:text-primary-container transition-colors flex items-center justify-center gap-1 mt-2">
+      <span class="material-symbols-outlined text-[16px]">arrow_back</span>
+      <span>Back to Main Summit Site</span>
+    </a>
+  </div>
+</div>
+
+<!-- ============================= APP VIEW ============================= -->
+<div class="hidden min-h-screen w-full" id="app-view">
+  <header class="border-b border-surface-border bg-surface-card">
+    <div class="max-w-[1200px] mx-auto px-4 sm:px-6 h-16 flex items-center justify-between">
+      <div class="flex flex-col">
+        <span class="font-headline-sm text-headline-sm text-text-primary font-extrabold leading-none">SHIFT<span class="text-primary-container">.</span></span>
+        <span class="font-kicker text-kicker text-text-muted uppercase tracking-widest">Admin Console</span>
+      </div>
+      <div class="flex items-center gap-3">
+        <span id="admin-email" class="font-body-sm text-body-sm text-text-muted hidden sm:inline"></span>
+        <button id="logout-btn" class="px-4 py-2 rounded-full bg-surface-container text-on-surface font-label-code text-label-code uppercase hover:bg-surface-container-high transition-colors">Sign out</button>
+      </div>
+    </div>
+  </header>
+
+  <div class="max-w-[1200px] mx-auto px-4 sm:px-6 py-6 flex flex-col gap-6">
+    <!-- QUICK STATS & METRICS DASHBOARD -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4" id="admin-metrics-grid">
+      <!-- Metric 1: Delegate Influx & Growth Graph (Endless Capacity) -->
+      <div class="bg-surface-card border border-surface-border rounded-xl p-4 flex flex-col justify-between gap-2 shadow-sm relative overflow-hidden">
+        <div class="flex items-center justify-between">
+          <div class="flex items-center gap-1.5">
+            <span class="material-symbols-outlined text-primary-container text-[18px]">show_chart</span>
+            <span class="font-kicker text-kicker uppercase text-text-muted">Delegate Influx</span>
+          </div>
+          <span id="metric-capacity-badge" class="font-label-badge text-[10px] text-primary-container bg-glow-lime px-2 py-0.5 rounded-full uppercase font-bold flex items-center gap-1">
+            <span class="text-xs leading-none font-bold">∞</span> Endless
+          </span>
+        </div>
+        <div class="flex flex-col gap-0.5">
+          <div class="flex items-baseline gap-2">
+            <span id="metric-registered-count" class="font-headline-lg text-headline-lg font-extrabold text-text-primary">0</span>
+            <span class="font-body-sm text-text-muted">registered</span>
+          </div>
+          <span class="font-label-code text-[11px] text-secondary">Unlimited open capacity</span>
+          <!-- Mini Sparkline Graph -->
+          <div class="w-full h-12 relative mt-1" id="metric-sparkline-container">
+            <svg id="metric-sparkline-svg" class="w-full h-full overflow-visible" preserveAspectRatio="none" viewBox="0 0 200 45">
+              <!-- Rendered via JS -->
+            </svg>
+          </div>
+        </div>
+        <div class="flex items-center justify-between font-label-code text-[11px] text-text-muted pt-1.5 border-t border-surface-border/40">
+          <span id="metric-sparkline-start">—</span>
+          <span class="text-primary-container flex items-center gap-1 font-bold"><span class="w-1.5 h-1.5 rounded-full bg-primary-container animate-pulse"></span> Open Flow</span>
+          <span id="metric-sparkline-end">—</span>
+        </div>
+      </div>
+
+      <!-- Metric 2: Attendance & Check-in Ready -->
+      <div class="bg-surface-card border border-surface-border rounded-xl p-4 flex flex-col justify-between gap-3 shadow-sm">
+        <div class="flex items-center justify-between">
+          <span class="font-kicker text-kicker uppercase text-text-muted">Checked-In / Attended</span>
+          <span class="material-symbols-outlined text-primary-container text-[18px]">how_to_reg</span>
+        </div>
+        <div class="flex flex-col gap-1">
+          <div class="flex items-baseline gap-2">
+            <span id="metric-attended-count" class="font-headline-lg text-headline-lg font-extrabold text-text-primary">0</span>
+            <span class="font-body-sm text-text-muted" id="metric-attended-pct">(0%)</span>
+          </div>
+          <span class="font-label-code text-xs text-secondary">Ready for event check-in gate</span>
+        </div>
+        <span class="font-label-code text-xs text-text-muted">Updated in real-time</span>
+      </div>
+
+      <!-- Metric 3: Top Academic Centers -->
+      <div class="bg-surface-card border border-surface-border rounded-xl p-4 flex flex-col justify-between gap-2 shadow-sm">
+        <div class="flex items-center justify-between">
+          <span class="font-kicker text-kicker uppercase text-text-muted">Top Representation</span>
+          <span class="material-symbols-outlined text-primary-container text-[18px]">school</span>
+        </div>
+        <div id="metric-top-institutions" class="flex flex-wrap gap-1.5 py-1">
+          <span class="text-xs text-text-muted">No data yet</span>
+        </div>
+        <span class="font-label-code text-xs text-text-muted">Universities &amp; faculties</span>
+      </div>
+
+      <!-- Metric 4: Partner Pipeline -->
+      <div class="bg-surface-card border border-surface-border rounded-xl p-4 flex flex-col justify-between gap-3 shadow-sm">
+        <div class="flex items-center justify-between">
+          <span class="font-kicker text-kicker uppercase text-text-muted">Partner Pipeline</span>
+          <span id="metric-new-partners-badge" class="font-label-badge text-[10px] text-primary-container bg-glow-lime px-2 py-0.5 rounded-full uppercase font-bold">0 New</span>
+        </div>
+        <div class="flex flex-col gap-1">
+          <div class="flex items-baseline gap-2">
+            <span id="metric-partner-total" class="font-headline-lg text-headline-lg font-extrabold text-text-primary">0</span>
+            <span class="font-body-sm text-text-muted">applications</span>
+          </div>
+          <span id="metric-partner-breakdown" class="font-label-code text-xs text-secondary">0 contacted · 0 approved</span>
+        </div>
+        <span class="font-label-code text-xs text-text-muted">Corporate sponsorship lead</span>
+      </div>
+    </div>
+
+    <!-- FULL DELEGATE GROWTH & TRAJECTORY GRAPH PANEL (Endless Capacity) -->
+    <div class="bg-surface-card border border-surface-border rounded-xl p-5 shadow-sm flex flex-col gap-4">
+      <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3 border-b border-surface-border/60 pb-3">
+        <div class="flex items-center gap-3">
+          <div class="w-9 h-9 rounded-lg bg-surface-container flex items-center justify-center text-primary-container border border-surface-border">
+            <span class="material-symbols-outlined text-[20px]">ssid_chart</span>
+          </div>
+          <div>
+            <div class="flex items-center gap-2">
+              <h3 class="font-headline-sm text-base sm:text-lg font-bold text-text-primary">Delegate Trajectory &amp; Registration Influx</h3>
+              <span class="font-label-badge text-[10px] text-primary-container bg-glow-lime px-2.5 py-0.5 rounded-full uppercase font-bold flex items-center gap-1">
+                <span class="text-xs leading-none font-bold">∞</span> Endless Capacity
+              </span>
+            </div>
+            <p class="font-body-sm text-xs text-text-muted">Real-time cumulative enrollment curve &amp; daily registration volume. No maximum capacity ceiling.</p>
+          </div>
+        </div>
+        <div class="flex items-center gap-4 text-xs font-label-code text-text-muted">
+          <div class="flex items-center gap-1.5">
+            <span class="w-3 h-0.5 bg-primary-container inline-block shadow-[0_0_6px_rgba(205,241,72,0.8)]"></span>
+            <span class="text-text-primary">Cumulative Curve</span>
+          </div>
+          <div class="flex items-center gap-1.5">
+            <span class="w-2.5 h-2.5 rounded-sm bg-primary-container/25 border border-primary-container/60 inline-block"></span>
+            <span class="text-text-primary">Daily Signups</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Main Graph Canvas -->
+      <div class="w-full relative py-2">
+        <div id="growth-graph-tooltip" class="absolute pointer-events-none opacity-0 bg-surface-container-highest/95 border border-primary-container/50 rounded-lg px-2.5 py-1.5 text-xs font-label-code text-text-primary shadow-2xl transition-opacity duration-150 z-20 whitespace-nowrap"></div>
+        <div class="w-full h-44 sm:h-52 relative">
+          <svg id="full-delegate-graph-svg" class="w-full h-full overflow-visible" preserveAspectRatio="none" viewBox="0 0 800 180">
+            <!-- Dynamically populated via JS -->
+          </svg>
+        </div>
+        <div id="full-graph-x-labels" class="flex justify-between items-center text-[11px] font-label-code text-text-muted pt-2 border-t border-surface-border/40 px-2">
+          <span>Start</span>
+          <span>Timeline</span>
+          <span>Latest</span>
+        </div>
+      </div>
+
+      <!-- Graph Quick Summary Strip -->
+      <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 pt-2 border-t border-surface-border/40 font-label-code text-xs">
+        <div class="flex flex-col">
+          <span class="text-text-muted text-[11px]">Total Registered</span>
+          <span id="graph-stat-total" class="font-bold text-text-primary text-sm">0 Delegates</span>
+        </div>
+        <div class="flex flex-col">
+          <span class="text-text-muted text-[11px]">Checked-In / Verified</span>
+          <span id="graph-stat-attended" class="font-bold text-primary-container text-sm">0</span>
+        </div>
+        <div class="flex flex-col">
+          <span class="text-text-muted text-[11px]">Daily Peak Influx</span>
+          <span id="graph-stat-peak" class="font-bold text-text-primary text-sm">0 / day</span>
+        </div>
+        <div class="flex flex-col">
+          <span class="text-text-muted text-[11px]">Capacity Ceiling</span>
+          <span class="font-bold text-primary-container text-sm flex items-center gap-1">
+            <span class="text-base leading-none">∞</span> Endless (Uncapped)
+          </span>
+        </div>
+      </div>
+    </div>
+
+    <nav class="flex flex-wrap gap-2" id="tab-nav">
+      <button class="tab-btn active px-4 py-2 rounded-full font-label-code text-label-code uppercase text-text-muted hover:text-white transition-colors" data-tab="speakers">Speakers</button>
+      <button class="tab-btn px-4 py-2 rounded-full font-label-code text-label-code uppercase text-text-muted hover:text-white transition-colors" data-tab="agenda">Agenda Schedule</button>
+      <button class="tab-btn px-4 py-2 rounded-full font-label-code text-label-code uppercase text-text-muted hover:text-white transition-colors" data-tab="team">Team</button>
+      <button class="tab-btn px-4 py-2 rounded-full font-label-code text-label-code uppercase text-text-muted hover:text-white transition-colors" data-tab="partners">Partners (displayed)</button>
+      <button class="tab-btn px-4 py-2 rounded-full font-label-code text-label-code uppercase text-text-muted hover:text-white transition-colors" data-tab="applicants">Applicants</button>
+      <button class="tab-btn px-4 py-2 rounded-full font-label-code text-label-code uppercase text-text-muted hover:text-white transition-colors" data-tab="partner-requests">Partner Applications</button>
+    </nav>
+
+    <!-- AGENDA TAB -->
+    <section class="tab-panel" id="panel-agenda">
+      <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-4">
+        <div>
+          <div class="flex items-center gap-2">
+            <h2 class="font-headline-lg text-headline-lg text-text-primary font-bold">Summit Agenda Schedule</h2>
+            <span id="agenda-count-badge" class="font-label-badge text-xs px-2.5 py-0.5 rounded-full bg-primary-container/20 text-primary-container font-bold">12 Sessions</span>
+          </div>
+          <p class="font-body-sm text-text-muted mt-1">Manage the live summit schedule, timeslots, room locations, speaker alignments, and takeaway points shown on the website.</p>
+        </div>
+        <div class="flex items-center gap-2 flex-wrap">
+          <button id="agenda-add-btn" class="px-4 py-2 rounded-full bg-primary-container text-on-primary font-label-code text-label-code uppercase font-bold hover:shadow-[0_0_12px_rgba(205,241,72,0.4)] transition-all flex items-center gap-1.5">
+            <span class="material-symbols-outlined text-[18px]">add</span>
+            <span>Add Session</span>
+          </button>
+          <button id="agenda-reset-default-btn" class="px-3 py-2 rounded-full bg-surface-container hover:bg-surface-container-high border border-surface-border text-text-muted hover:text-text-primary font-label-code text-xs uppercase transition-all flex items-center gap-1" title="Restore default curated 12-session agenda">
+            <span class="material-symbols-outlined text-[16px]">restart_alt</span>
+            <span>Reset Default</span>
+          </button>
+          <a href="/index.html#agenda" target="_blank" class="px-3 py-2 rounded-full bg-surface-container hover:bg-surface-container-high border border-surface-border text-primary-container font-label-code text-xs uppercase transition-all flex items-center gap-1">
+            <span class="material-symbols-outlined text-[16px]">visibility</span>
+            <span>Live View</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- Agenda Controls & Filters -->
+      <div class="flex flex-col sm:flex-row gap-3 items-stretch sm:items-center justify-between bg-surface-card border border-surface-border p-3 rounded-xl mb-4">
+        <div class="flex items-center gap-1 bg-surface-container p-1 rounded-lg" id="admin-agenda-filter-group">
+          <button class="admin-agenda-filter-btn px-3 py-1.5 rounded-md font-label-code text-xs uppercase tracking-wider transition-all bg-primary-container text-on-primary font-bold" data-filter="all">All</button>
+          <button class="admin-agenda-filter-btn px-3 py-1.5 rounded-md font-label-code text-xs uppercase tracking-wider transition-all text-text-muted hover:text-text-primary" data-filter="talks">Talks</button>
+          <button class="admin-agenda-filter-btn px-3 py-1.5 rounded-md font-label-code text-xs uppercase tracking-wider transition-all text-text-muted hover:text-text-primary" data-filter="networking">Networking</button>
+          <button class="admin-agenda-filter-btn px-3 py-1.5 rounded-md font-label-code text-xs uppercase tracking-wider transition-all text-text-muted hover:text-text-primary" data-filter="workshop">Workshop</button>
+        </div>
+        <div class="relative flex-1 max-w-xs">
+          <span class="material-symbols-outlined absolute left-3 top-2.5 text-text-muted text-[18px]">search</span>
+          <input type="text" id="admin-agenda-search" placeholder="Search sessions, speakers, rooms..." class="pl-9 text-xs" style="padding-left: 2.25rem; font-size: 13px;"/>
+        </div>
+      </div>
+
+      <!-- Inline Add/Edit Form -->
+      <div id="form-agenda" class="hidden bg-surface-card border border-primary-container/40 rounded-xl p-6 mb-6 shadow-xl relative">
+        <div class="flex items-center justify-between border-b border-surface-border/60 pb-3 mb-4">
+          <div class="flex items-center gap-2">
+            <span class="material-symbols-outlined text-primary-container text-[22px]">calendar_today</span>
+            <h3 id="form-agenda-title" class="font-headline-sm text-headline-sm text-text-primary font-bold">Add Agenda Session</h3>
+          </div>
+          <button type="button" id="agenda-form-close-x" class="text-text-muted hover:text-text-primary p-1 rounded-full hover:bg-surface-container">
+            <span class="material-symbols-outlined text-[20px]">close</span>
+          </button>
+        </div>
+
+        <form id="agenda-edit-form" class="flex flex-col gap-4">
+          <input type="hidden" id="agenda-form-id"/>
+
+          <!-- Row 1: Time, Type, Badge, Sort Order -->
+          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+            <div class="flex flex-col gap-1">
+              <label class="field-label">Time Window (e.g. 10:15 – 11:00) *</label>
+              <input type="text" id="agenda-form-time" required placeholder="10:15 – 11:00"/>
+            </div>
+            <div class="flex flex-col gap-1">
+              <label class="field-label">Category Track *</label>
+              <select id="agenda-form-type" required>
+                <option value="talks">Talks (Keynote / Panel / Tech Presentation)</option>
+                <option value="networking">Networking (Check-in / Breaks / Salons)</option>
+                <option value="workshop">Workshop (Practical Hands-on Sprint)</option>
+              </select>
+            </div>
+            <div class="flex flex-col gap-1">
+              <label class="field-label">Badge Label (e.g. Keynote, Opening Talk)</label>
+              <input type="text" id="agenda-form-badge" placeholder="Keynote"/>
+            </div>
+            <div class="flex flex-col gap-1">
+              <label class="field-label">Display Order (1, 2, 3...)</label>
+              <input type="number" id="agenda-form-sort-order" value="1"/>
+            </div>
+          </div>
+
+          <!-- Row 2: Title & Subtitle -->
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div class="flex flex-col gap-1">
+              <label class="field-label">Session Title *</label>
+              <input type="text" id="agenda-form-session-title" required placeholder="AI Is Changing Business"/>
+            </div>
+            <div class="flex flex-col gap-1">
+              <label class="field-label">One-Line Summary / Subtitle</label>
+              <input type="text" id="agenda-form-subtitle" placeholder="Unpacking ROI, corporate structural shifts, and macro adoption"/>
+            </div>
+          </div>
+
+          <!-- Row 3: Speaker / Host Details -->
+          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 bg-surface-container/40 p-4 rounded-lg border border-surface-border">
+            <div class="flex flex-col gap-1">
+              <label class="field-label">Speaker / Host Name</label>
+              <input type="text" id="agenda-form-host-name" placeholder="Executive Keynote Speaker"/>
+            </div>
+            <div class="flex flex-col gap-1">
+              <label class="field-label">Role / Affiliation</label>
+              <input type="text" id="agenda-form-host-role" placeholder="Founder & CEO · Enterprise AI Scaleup"/>
+            </div>
+            <div class="flex flex-col gap-1">
+              <label class="field-label">Host Category Tag</label>
+              <input type="text" id="agenda-form-host-category" placeholder="Keynote Speaker"/>
+            </div>
+            <div class="flex flex-col gap-1">
+              <label class="field-label">Avatar Initials (2 Letters)</label>
+              <input type="text" id="agenda-form-host-initials" maxlength="3" placeholder="KS"/>
+            </div>
+          </div>
+
+          <!-- Row 4: Room Location & Calendar ISO Timestamps -->
+          <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+            <div class="flex flex-col gap-1">
+              <label class="field-label">Room / Amphitheatre / Stage</label>
+              <input type="text" id="agenda-form-room" placeholder="Grand Plenary Amphitheatre"/>
+            </div>
+            <div class="flex flex-col gap-1">
+              <label class="field-label">Start Time ISO (Cal export, e.g. 20261128T091500Z)</label>
+              <input type="text" id="agenda-form-start-iso" placeholder="20261128T091500Z"/>
+            </div>
+            <div class="flex flex-col gap-1">
+              <label class="field-label">End Time ISO (Cal export, e.g. 20261128T100000Z)</label>
+              <input type="text" id="agenda-form-end-iso" placeholder="20261128T100000Z"/>
+            </div>
+          </div>
+
+          <!-- Row 5: Detailed Narrative Overview (Expanded Drawer) -->
+          <div class="flex flex-col gap-1">
+            <label class="field-label">Session Overview / Narrative (Shows when drawer is expanded)</label>
+            <textarea id="agenda-form-overview" rows="3" placeholder="Detailed thesis, what delegates will explore, and executive context..."></textarea>
+          </div>
+
+          <!-- Row 6: Key Takeaways (One per line) -->
+          <div class="flex flex-col gap-1">
+            <label class="field-label">Key Takeaways &amp; Focus Points (One bullet point per line)</label>
+            <textarea id="agenda-form-takeaways" rows="3" placeholder="Calculating true AI ROI models
+Restructuring enterprise workflows around autonomous agents
+Live 10-minute executive Q&amp;A"></textarea>
+          </div>
+
+          <div class="flex items-center justify-between pt-2 border-t border-surface-border/60">
+            <div class="flex items-center gap-2">
+              <input type="checkbox" id="agenda-form-published" checked class="w-4 h-4"/>
+              <label for="agenda-form-published" class="field-label cursor-pointer text-text-primary">Published (Live on Website)</label>
+            </div>
+            <div class="flex items-center gap-3">
+              <button type="button" id="agenda-form-cancel" class="px-4 py-2 rounded-full bg-surface-container text-on-surface font-label-code text-label-code uppercase hover:bg-surface-container-high transition-colors">Cancel</button>
+              <button type="submit" id="agenda-form-submit" class="px-5 py-2 rounded-full bg-primary-container text-on-primary font-label-code text-label-code uppercase font-bold hover:shadow-[0_0_12px_rgba(205,241,72,0.4)] transition-all">Save Session</button>
+            </div>
+          </div>
+          <p id="agenda-form-status" class="font-body-sm text-body-sm hidden text-center"></p>
+        </form>
+      </div>
+
+      <!-- Agenda List View -->
+      <div id="list-agenda" class="flex flex-col gap-3">
+        <!-- Rendered by JS -->
+      </div>
+    </section>
+
+    <!-- SPEAKERS TAB -->
+    <section class="tab-panel active" id="panel-speakers">
+      <div class="flex items-center justify-between mb-4">
+        <h2 class="font-headline-lg text-headline-lg text-text-primary font-bold">Speakers</h2>
+        <button class="add-btn px-4 py-2 rounded-full bg-primary-container text-on-primary font-label-code text-label-code uppercase font-bold" data-entity="speakers">+ Add speaker</button>
+      </div>
+      <div id="form-speakers" class="hidden bg-surface-card border border-surface-border rounded-xl p-6 mb-6"></div>
+      <div id="list-speakers" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4"></div>
+    </section>
+
+    <!-- TEAM TAB -->
+    <section class="tab-panel" id="panel-team">
+      <div class="flex items-center justify-between mb-4">
+        <h2 class="font-headline-lg text-headline-lg text-text-primary font-bold">Organizing Team</h2>
+        <button class="add-btn px-4 py-2 rounded-full bg-primary-container text-on-primary font-label-code text-label-code uppercase font-bold" data-entity="team_members">+ Add team member</button>
+      </div>
+      <div id="form-team_members" class="hidden bg-surface-card border border-surface-border rounded-xl p-6 mb-6"></div>
+      <div id="list-team_members" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4"></div>
+    </section>
+
+    <!-- PARTNERS (DISPLAYED) TAB -->
+    <section class="tab-panel" id="panel-partners">
+      <div class="flex items-center justify-between mb-4">
+        <h2 class="font-headline-lg text-headline-lg text-text-primary font-bold">Displayed Partners</h2>
+        <button class="add-btn px-4 py-2 rounded-full bg-primary-container text-on-primary font-label-code text-label-code uppercase font-bold" data-entity="partners">+ Add partner logo</button>
+      </div>
+      <p class="font-body-sm text-body-sm text-text-muted mb-4">These are the logos shown in the "Trusted By" strip on the site. Companies that apply through the website land in the "Partner Applications" tab first — approve them there, then add their logo here.</p>
+      <div id="form-partners" class="hidden bg-surface-card border border-surface-border rounded-xl p-6 mb-6"></div>
+      <div id="list-partners" class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4"></div>
+    </section>
+
+    <!-- APPLICANTS TAB -->
+    <section class="tab-panel" id="panel-applicants">
+      <div class="flex flex-col sm:flex-row sm:items-center justify-between mb-4 gap-3">
+        <h2 class="font-headline-lg text-headline-lg text-text-primary font-bold">Applicants <span id="applicants-count" class="text-text-muted font-body-sm"></span></h2>
+        <div class="flex flex-wrap items-center gap-2">
+          <button id="export-applicants-btn" class="px-4 py-2 rounded-full bg-surface-container text-on-surface font-label-code text-label-code uppercase hover:bg-surface-container-high transition-colors flex items-center gap-1.5">
+            <span class="material-symbols-outlined text-[16px]">download</span>
+            <span>Export CSV</span>
+          </button>
+          <button id="send-reminders-btn" class="px-4 py-2 rounded-full bg-primary-container text-on-primary font-label-code text-label-code uppercase font-bold flex items-center gap-1.5">
+            <span class="material-symbols-outlined text-[16px]">send</span>
+            <span>Send reminders</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- Applicant Search & Filtering Toolbar -->
+      <div class="bg-surface-card border border-surface-border rounded-xl p-3 sm:p-4 mb-4 grid grid-cols-1 sm:grid-cols-3 lg:grid-cols-4 gap-3 items-center">
+        <!-- Search Input -->
+        <div class="relative sm:col-span-2">
+          <span class="material-symbols-outlined absolute left-3 top-2.5 text-text-muted text-[18px]">search</span>
+          <input type="text" id="applicant-search-input" placeholder="Search by name, email, university, faculty..." class="w-full bg-surface-container-lowest text-text-primary pl-9 pr-3 py-2 rounded-lg font-body-sm text-xs focus:outline-none focus:ring-1 focus:ring-primary-container border border-surface-border"/>
+        </div>
+        <!-- Status Filter -->
+        <div>
+          <select id="applicant-status-filter" class="w-full bg-surface-container-lowest text-text-primary px-3 py-2 rounded-lg font-label-code text-xs focus:outline-none border border-surface-border">
+            <option value="all">All Statuses</option>
+            <option value="registered">Registered</option>
+            <option value="attended">Attended / Checked In</option>
+            <option value="vip">VIP / Reserved</option>
+            <option value="cancelled">Cancelled</option>
+          </select>
+        </div>
+        <!-- University Filter -->
+        <div class="flex items-center gap-2">
+          <select id="applicant-uni-filter" class="w-full bg-surface-container-lowest text-text-primary px-3 py-2 rounded-lg font-label-code text-xs focus:outline-none border border-surface-border">
+            <option value="all">All Institutions</option>
+          </select>
+          <button id="clear-applicant-filters" type="button" class="shrink-0 p-2 rounded-lg bg-surface-container hover:bg-surface-container-high text-text-muted hover:text-white" title="Reset Filters">
+            <span class="material-symbols-outlined text-[16px]">filter_alt_off</span>
+          </button>
+        </div>
+      </div>
+
+      <p id="reminders-status" class="font-body-sm text-body-sm text-text-muted mb-4 hidden"></p>
+      <div class="overflow-x-auto bg-surface-card border border-surface-border rounded-xl">
+        <table class="w-full text-left text-body-sm">
+          <thead>
+            <tr class="border-b border-surface-border text-text-muted font-label-code text-label-code uppercase">
+              <th class="p-3">Name</th>
+              <th class="p-3">Email</th>
+              <th class="p-3">Phone</th>
+              <th class="p-3">University</th>
+              <th class="p-3">Faculty</th>
+              <th class="p-3">Registered</th>
+              <th class="p-3">Status / Tag</th>
+              <th class="p-3 text-center">Confirmed</th>
+              <th class="p-3 text-center">Reminded</th>
+            </tr>
+          </thead>
+          <tbody id="applicants-table-body"></tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- PARTNER APPLICATIONS TAB -->
+    <section class="tab-panel" id="panel-partner-requests">
+      <div class="flex flex-col sm:flex-row sm:items-center justify-between mb-4 gap-3">
+        <h2 class="font-headline-lg text-headline-lg text-text-primary font-bold">Partner Applications <span id="partner-requests-count" class="text-text-muted font-body-sm"></span></h2>
+        <button id="export-partners-btn" class="px-4 py-2 rounded-full bg-surface-container text-on-surface font-label-code text-label-code uppercase hover:bg-surface-container-high transition-colors flex items-center gap-1.5 self-start sm:self-auto">
+          <span class="material-symbols-outlined text-[16px]">download</span>
+          <span>Export CSV</span>
+        </button>
+      </div>
+      <div class="overflow-x-auto bg-surface-card border border-surface-border rounded-xl">
+        <table class="w-full text-left text-body-sm">
+          <thead>
+            <tr class="border-b border-surface-border text-text-muted font-label-code text-label-code uppercase">
+              <th class="p-3">Company</th><th class="p-3">Contact</th><th class="p-3">Email</th><th class="p-3">Phone</th><th class="p-3">Message</th><th class="p-3">Status</th><th class="p-3">Received</th>
+            </tr>
+          </thead>
+          <tbody id="partner-requests-table-body"></tbody>
+        </table>
+      </div>
+    </section>
+  </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="config.js"></script>
+<script src="admin.js"></script>
+</body>
+</html>

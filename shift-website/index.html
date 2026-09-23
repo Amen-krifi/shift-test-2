@@ -1,0 +1,1764 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><title>SHIFT — Executive AI Summit</title><meta name="description" content="A one-day executive summit convening enterprise founders, c-level strategists, and machine intelligence architects with the next generation of builders."/><meta property="og:title" content="SHIFT — Executive AI Summit"/><meta property="og:description" content="A one-day executive summit convening enterprise founders, c-level strategists, and machine intelligence architects with the next generation of builders."/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=JetBrains+Mono:wght@500;600&amp;family=Plus+Jakarta+Sans:wght@600;700;800&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}
+.agenda-drawer {
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows 340ms cubic-bezier(0.16, 1, 0.3, 1), opacity 260ms ease;
+  opacity: 0;
+}
+.agenda-item:hover .agenda-drawer,
+.agenda-item:focus-within .agenda-drawer,
+.agenda-item.is-expanded .agenda-drawer {
+  grid-template-rows: 1fr;
+  opacity: 1;
+}
+.agenda-chevron {
+  transition: transform 300ms cubic-bezier(0.16, 1, 0.3, 1), color 200ms ease;
+}
+.agenda-item:hover .agenda-chevron,
+.agenda-item:focus-within .agenda-chevron,
+.agenda-item.is-expanded .agenda-chevron {
+  transform: rotate(180deg);
+}
+.agenda-item {
+  transition: transform 200ms ease, border-color 220ms ease, background-color 220ms ease, box-shadow 220ms ease;
+}
+</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "on-secondary-container": "#b3b8c7", "primary-fixed-dim": "#b2d42b", "on-surface": "#e1e2eb", "outline": "#8f937c", "glow-lime": "rgba(217, 253, 83, 0.15)", "primary-fixed": "#cdf148", "outline-variant": "#454935", "surface-card-hover": "#1A2230", "surface-container-low": "#191c22", "surface-tint": "#b2d42b", "on-primary-fixed-variant": "#3e4c00", "text-primary": "#FFFFFF", "on-tertiary": "#2f2f3d", "glow-lime-subtle": "rgba(217, 253, 83, 0.05)", "tertiary-fixed": "#e3e0f3", "secondary": "#c1c6d5", "surface-container": "#1d2026", "inverse-primary": "#536600", "on-primary-container": "#586c00", "surface-border": "#1F2837", "surface-variant": "#32353c", "surface-container-highest": "#32353c", "on-tertiary-container": "#646373", "on-surface-variant": "#c5c9af", "inverse-surface": "#e1e2eb", "inverse-on-surface": "#2e3037", "primary-container": "#cdf148", "secondary-container": "#434956", "on-secondary-fixed-variant": "#414753", "surface-container-high": "#272a31", "surface-border-active": "#2E3C52", "tertiary": "#ffffff", "on-error-container": "#ffdad6", "on-tertiary-fixed": "#1a1a27", "on-secondary-fixed": "#161c27", "on-primary": "#2a3500", "surface-bright": "#363940", "background": "#10131a", "tertiary-container": "#e3e0f3", "on-secondary": "#2b313c", "surface": "#10131a", "error": "#ffb4ab", "error-container": "#93000a", "text-muted": "#9CA3AF", "surface-card": "#121721", "secondary-fixed-dim": "#c1c6d5", "surface-dim": "#10131a", "on-error": "#690005", "secondary-fixed": "#dde2f2", "on-primary-fixed": "#171e00", "on-tertiary-fixed-variant": "#464554", "on-background": "#e1e2eb", "primary": "#ffffff", "tertiary-fixed-dim": "#c7c4d7", "surface-container-lowest": "#0b0e14" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "space-lg": "1.5rem", "gutter-mobile": "1rem", "space-md": "1rem", "space-3xl": "6rem", "space-sm": "0.5rem", "margin": "3rem", "space-xs": "0.25rem", "margin-mobile": "1.25rem", "space-xl": "2.5rem", "space-2xl": "4rem", "gutter": "1.5rem" }, "fontFamily": { "body-sm": [ "Inter" ], "display-hero-mobile": [ "Plus Jakarta Sans" ], "headline-lg": [ "Plus Jakarta Sans" ], "headline-xl": [ "Plus Jakarta Sans" ], "label-code": [ "JetBrains Mono" ], "kicker": [ "JetBrains Mono" ], "label-badge": [ "JetBrains Mono" ], "headline-sm": [ "Plus Jakarta Sans" ], "body-md": [ "Inter" ], "body-lg": [ "Inter" ], "display-hero": [ "Plus Jakarta Sans" ], "headline-xl-mobile": [ "Plus Jakarta Sans" ] }, "fontSize": { "body-sm": [ "13px", { "lineHeight": "20px", "fontWeight": "400" } ], "display-hero-mobile": [ "36px", { "lineHeight": "42px", "letterSpacing": "-0.02em", "fontWeight": "800" } ], "headline-lg": [ "28px", { "lineHeight": "36px", "letterSpacing": "-0.02em", "fontWeight": "700" } ], "headline-xl": [ "40px", { "lineHeight": "48px", "letterSpacing": "-0.025em", "fontWeight": "700" } ], "label-code": [ "12px", { "lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "500" } ], "kicker": [ "11px", { "lineHeight": "16px", "letterSpacing": "0.12em", "fontWeight": "600" } ], "label-badge": [ "11px", { "lineHeight": "14px", "letterSpacing": "0.08em", "fontWeight": "600" } ], "headline-sm": [ "20px", { "lineHeight": "28px", "letterSpacing": "-0.01em", "fontWeight": "600" } ], "body-md": [ "15px", { "lineHeight": "24px", "fontWeight": "400" } ], "body-lg": [ "18px", { "lineHeight": "28px", "fontWeight": "400" } ], "display-hero": [ "56px", { "lineHeight": "64px", "letterSpacing": "-0.03em", "fontWeight": "800" } ], "headline-xl-mobile": [ "28px", { "lineHeight": "34px", "letterSpacing": "-0.02em", "fontWeight": "700" } ] } } } };</script></head><body class="bg-surface-container-lowest text-on-surface font-body-md text-body-md selection:bg-primary-container selection:text-on-primary-container antialiased"><header class="fixed top-0 left-0 w-full z-50 bg-surface-card/85 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.4)]"><div class="h-20 max-w-[1200px] mx-auto px-gutter-mobile lg:px-gutter flex items-center justify-between gap-space-md"><div class="flex items-center gap-space-lg"><a class="flex flex-col group" data-path="overview" href="#"><span class="font-headline-sm text-headline-sm text-text-primary tracking-tight font-extrabold group-hover:text-primary-container transition-colors">SHIFT<span class="text-primary-container">.</span></span><span class="font-kicker text-kicker text-text-muted uppercase tracking-widest">AIESEC in Bardo</span></a><nav class="hidden xl:flex items-center gap-space-lg" data-active-classes="text-text-primary font-bold"><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors" data-path="about" href="#about">About</a><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors" data-path="agenda" href="#agenda">Agenda</a><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors" data-path="speakers" href="#speakers">Speakers</a><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors" data-path="partners" href="#partners">Partners</a><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors" data-path="team" href="#team">Team</a><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors" data-path="faq" href="#faq">FAQ</a></nav></div><div class="flex items-center gap-space-sm sm:gap-space-md"><a class="hidden sm:inline-flex items-center justify-center px-space-md py-space-xs rounded-full bg-surface-card text-on-surface font-label-code text-label-code uppercase hover:bg-surface-card-hover hover:text-primary-container transition-all" data-path="become-a-partner" href="#become-a-partner">Become a Partner</a><a class="inline-flex items-center justify-center px-space-md py-space-xs rounded-full bg-primary-container text-on-primary font-label-code text-label-code uppercase font-semibold shadow-[0_0_16px_rgba(217,253,83,0.25)] hover:shadow-[0_0_24px_rgba(217,253,83,0.4)] transition-all" data-path="register" href="#register">Register</a></div></div></header><main class="w-full pt-20 bg-surface-container-lowest min-h-screen"><div class="flex flex-col w-full">
+<!-- HERO SECTION -->
+<section class="relative w-full overflow-hidden bg-surface-container-lowest">
+<!-- Atmospheric Ambient Glows & Corporate Radial Accents -->
+<div class="absolute -top-40 right-1/4 w-[600px] h-[600px] rounded-full bg-primary-container/10 blur-[130px] pointer-events-none"></div>
+<div class="absolute top-1/3 -left-32 w-[500px] h-[500px] rounded-full bg-surface-container-high/40 blur-[100px] pointer-events-none"></div>
+<div class="max-w-[1200px] mx-auto px-gutter-mobile lg:px-gutter pt-space-2xl pb-space-3xl relative z-10">
+<!-- Executive Kicker Pill -->
+<div class="inline-flex items-center gap-space-sm px-space-md py-space-xs rounded-full bg-surface-card text-on-surface mb-space-lg shadow-sm">
+<span class="w-2 h-2 rounded-full bg-primary-container animate-pulse"></span>
+<span class="font-kicker text-kicker uppercase tracking-widest text-on-surface-variant">AIESEC in Bardo Presents · Executive AI Summit</span>
+</div>
+<!-- Main Heading & Briefing -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-xl items-end">
+<div class="lg:col-span-8 flex flex-col gap-space-md">
+<h1 class="font-display-hero text-display-hero text-text-primary tracking-tight font-extrabold max-w-3xl">
+            Where Business meets <span class="text-primary-container">AI.</span>
+</h1>
+<p class="font-body-lg text-body-lg text-secondary max-w-2xl">
+            A one-day executive summit convening enterprise founders, c-level strategists, and machine intelligence architects with the next generation of builders. No hackathon — strictly strategic enterprise deployment.
+          </p>
+</div>
+<!-- Date & Location Metadata Card -->
+<div class="lg:col-span-4 flex flex-col justify-end">
+<div class="bg-surface-card rounded-xl p-space-lg shadow-md flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+  <div class="flex items-center gap-space-sm">
+    <span class="material-symbols-outlined text-primary-container">calendar_today</span>
+    <span class="font-label-code text-label-code text-text-primary uppercase">28 November 2026</span>
+  </div>
+  <button id="hero-cal-btn" type="button" class="text-xs font-label-code text-primary-container hover:underline flex items-center gap-1 bg-surface-container px-2 py-1 rounded">
+    <span class="material-symbols-outlined text-[14px]">edit_calendar</span>
+    <span>Add to Cal</span>
+  </button>
+</div>
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-on-surface-variant">location_on</span>
+<span class="font-body-sm text-body-sm text-secondary">Cité de la Culture or UTICA, Tunis</span>
+</div>
+<div class="pt-space-xs flex items-center gap-space-xs">
+<span class="font-label-badge text-label-badge text-primary-container bg-glow-lime px-space-sm py-space-xs rounded-full uppercase">Official Assembly</span>
+<span class="font-label-badge text-label-badge text-on-surface-variant bg-surface-container px-space-sm py-space-xs rounded-full uppercase">Executive Access</span>
+</div>
+</div>
+</div>
+</div>
+<!-- CTAs Strip -->
+<div class="mt-space-xl flex flex-wrap items-center gap-space-md">
+<a class="inline-flex items-center justify-center gap-space-sm px-space-xl py-space-md rounded-full bg-primary-container text-on-primary font-headline-sm text-body-md font-bold shadow-[0_0_24px_rgba(205,241,72,0.3)] hover:shadow-[0_0_32px_rgba(205,241,72,0.5)] transition-all" href="#register">
+<span>Register Executive Interest</span>
+<span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</a>
+<a class="inline-flex items-center justify-center gap-space-sm px-space-xl py-space-md rounded-full bg-surface-card text-text-primary font-headline-sm text-body-md font-semibold hover:bg-surface-card-hover transition-all" href="#agenda">
+<span class="material-symbols-outlined text-[18px]">event_note</span>
+<span>Download Summit Agenda</span>
+</a>
+</div>
+<!-- Live Executive Countdown Ticker -->
+<div class="mt-space-2xl grid grid-cols-2 md:grid-cols-4 gap-space-md">
+<div class="bg-surface-card rounded-xl p-space-lg flex flex-col items-center justify-center text-center">
+<span class="font-display-hero text-headline-xl text-primary-container font-extrabold tracking-tight" id="countdown-days">71</span>
+<span class="font-label-code text-label-code uppercase tracking-widest text-text-muted mt-space-xs">Days Remaining</span>
+</div>
+<div class="bg-surface-card rounded-xl p-space-lg flex flex-col items-center justify-center text-center">
+<span class="font-display-hero text-headline-xl text-text-primary font-extrabold tracking-tight" id="countdown-hours">14</span>
+<span class="font-label-code text-label-code uppercase tracking-widest text-text-muted mt-space-xs">Hours</span>
+</div>
+<div class="bg-surface-card rounded-xl p-space-lg flex flex-col items-center justify-center text-center">
+<span class="font-display-hero text-headline-xl text-text-primary font-extrabold tracking-tight" id="countdown-minutes">06</span>
+<span class="font-label-code text-label-code uppercase tracking-widest text-text-muted mt-space-xs">Minutes</span>
+</div>
+<div class="bg-surface-card rounded-xl p-space-lg flex flex-col items-center justify-center text-center">
+<span class="font-display-hero text-headline-xl text-primary-fixed-dim font-extrabold tracking-tight" id="countdown-seconds">32</span>
+<span class="font-label-code text-label-code uppercase tracking-widest text-text-muted mt-space-xs">Seconds</span>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTION: ABOUT / EXECUTIVE THESIS -->
+<section class="w-full bg-surface-container-low py-space-3xl relative" id="about">
+<div class="max-w-[1200px] mx-auto px-gutter-mobile lg:px-gutter flex flex-col gap-space-2xl">
+<!-- Section Tag -->
+<div class="flex flex-col gap-space-xs">
+<span class="font-kicker text-kicker uppercase tracking-widest text-primary-container">Executive Thesis</span>
+<h2 class="font-headline-xl text-headline-xl text-text-primary tracking-tight font-extrabold">
+          Not the tech behind AI.<br/>The business in front of it.
+        </h2>
+</div>
+<!-- Split Column Content -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-xl items-start">
+<div class="lg:col-span-7 flex flex-col gap-space-lg">
+<p class="font-body-lg text-body-lg text-secondary leading-relaxed">
+            SHIFT is a high-level summit engineered around operational intelligence — prioritizing measurable business outcomes over esoteric engineering diagrams. Through curated keynotes, candid executive debates, and high-trust networking corridors, SHIFT establishes a direct nexus between current industry leaders and future executive operators.
+          </p>
+<div class="flex flex-wrap gap-space-sm pt-space-xs">
+<span class="px-space-md py-space-xs rounded-full bg-surface-card text-on-surface font-label-code text-label-code">150+ Next-Gen Builders</span>
+<span class="px-space-md py-space-xs rounded-full bg-surface-card text-on-surface font-label-code text-label-code">10+ Academic Centers</span>
+<span class="px-space-md py-space-xs rounded-full bg-surface-card text-on-surface font-label-code text-label-code">6 Curated Keynotes</span>
+<span class="px-space-md py-space-xs rounded-full bg-surface-card text-on-surface font-label-code text-label-code">1 Flagship Board Panel</span>
+<span class="px-space-md py-space-xs rounded-full bg-surface-card text-on-surface font-label-code text-label-code">Executive Networking Salons</span>
+<span class="px-space-md py-space-xs rounded-full bg-glow-lime text-primary-container font-label-code text-label-code font-bold">Zero Hype Policy</span>
+</div>
+</div>
+<!-- Pillar Stat Grid -->
+<div class="lg:col-span-5 grid grid-cols-2 gap-space-md">
+<div class="bg-surface-card rounded-xl p-space-lg flex flex-col gap-space-xs">
+<span class="font-headline-lg text-headline-lg text-primary-container font-extrabold">100%</span>
+<span class="font-headline-sm text-headline-sm text-text-primary">Actionable</span>
+<p class="font-body-sm text-body-sm text-text-muted mt-space-xs">Real enterprise case studies with verified metrics.</p>
+</div>
+<div class="bg-surface-card rounded-xl p-space-lg flex flex-col gap-space-xs">
+<span class="font-headline-lg text-headline-lg text-text-primary font-extrabold">1:1</span>
+<span class="font-headline-sm text-headline-sm text-text-primary">Executive Ratio</span>
+<p class="font-body-sm text-body-sm text-text-muted mt-space-xs">Direct access corridors between leaders &amp; talent.</p>
+</div>
+<div class="bg-surface-card rounded-xl p-space-lg flex flex-col gap-space-xs">
+<span class="font-headline-lg text-headline-lg text-text-primary font-extrabold">08h</span>
+<span class="font-headline-sm text-headline-sm text-text-primary">Intensive</span>
+<p class="font-body-sm text-body-sm text-text-muted mt-space-xs">Packed schedule engineered for maximum decision leverage.</p>
+</div>
+<div class="bg-surface-card rounded-xl p-space-lg flex flex-col gap-space-xs">
+<span class="font-headline-lg text-headline-lg text-primary-fixed-dim font-extrabold">Bardo</span>
+<span class="font-headline-sm text-headline-sm text-text-primary">Curated</span>
+<p class="font-body-sm text-body-sm text-text-muted mt-space-xs">Orchestrated under global AIESEC governance.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTION: AGENDA TIMELINE -->
+<section class="w-full bg-surface-container-lowest py-space-3xl" id="agenda">
+<div class="max-w-[1200px] mx-auto px-gutter-mobile lg:px-gutter flex flex-col gap-space-2xl">
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-space-md">
+<div>
+<span class="font-kicker text-kicker uppercase tracking-widest text-primary-container">Summit Schedule</span>
+<h2 class="font-headline-xl text-headline-xl text-text-primary tracking-tight font-extrabold mt-space-xs">
+            One day, start to finish.
+          </h2>
+</div>
+<p class="font-body-sm text-body-sm text-text-muted max-w-md">
+          Talks, enterprise cases, a flagship panel, and high-frequency networking roundtables. Timings may refine as delegate confirmations conclude.
+        </p>
+</div>
+
+<!-- Agenda Filter Toggle Bar & Micro-Interaction Guidance -->
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-space-md border-b border-surface-border/60 pb-space-sm">
+  <div class="inline-flex items-center gap-1 p-1 bg-surface-card border border-surface-border rounded-xl" id="agenda-filter-container" role="tablist" aria-label="Filter Agenda Sessions">
+    <button type="button" class="agenda-filter-btn px-4 py-2 rounded-lg font-label-code text-xs uppercase tracking-wider transition-all duration-200 bg-primary-container text-on-primary font-bold shadow-[0_0_12px_rgba(205,241,72,0.3)]" data-filter="all" role="tab" aria-selected="true">
+      All <span class="opacity-75 font-normal ml-0.5">(12)</span>
+    </button>
+    <button type="button" class="agenda-filter-btn px-4 py-2 rounded-lg font-label-code text-xs uppercase tracking-wider transition-all duration-200 text-text-muted hover:text-text-primary hover:bg-surface-container" data-filter="talks" role="tab" aria-selected="false">
+      Talks <span class="opacity-75 font-normal ml-0.5">(7)</span>
+    </button>
+    <button type="button" class="agenda-filter-btn px-4 py-2 rounded-lg font-label-code text-xs uppercase tracking-wider transition-all duration-200 text-text-muted hover:text-text-primary hover:bg-surface-container" data-filter="networking" role="tab" aria-selected="false">
+      Networking <span class="opacity-75 font-normal ml-0.5">(4)</span>
+    </button>
+    <button type="button" class="agenda-filter-btn px-4 py-2 rounded-lg font-label-code text-xs uppercase tracking-wider transition-all duration-200 text-text-muted hover:text-text-primary hover:bg-surface-container" data-filter="workshop" role="tab" aria-selected="false">
+      Workshop <span class="opacity-75 font-normal ml-0.5">(1)</span>
+    </button>
+  </div>
+  <div class="flex items-center gap-2 font-label-code text-xs text-text-muted">
+    <span class="w-2 h-2 rounded-full bg-primary-container animate-pulse"></span>
+    <span class="hidden sm:inline">Hover over any session to smoothly expand full details &amp; takeaways</span>
+    <span class="sm:hidden">Tap any session to expand full details</span>
+  </div>
+</div>
+
+<!-- Schedule Timeline Feed -->
+<div class="flex flex-col gap-space-sm" id="agenda-timeline-list">
+
+<!-- 09:15 Registration -->
+<div class="agenda-item group relative bg-surface-card rounded-xl p-space-md sm:p-space-lg border border-surface-border/60 hover:border-primary-container/50 hover:bg-surface-card-hover transition-all duration-300 shadow-sm cursor-pointer select-none" data-agenda-type="networking" tabindex="0">
+  <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-space-md">
+    <div class="flex items-start sm:items-center gap-space-md flex-1">
+      <span class="font-label-code text-label-code text-primary-container w-28 shrink-0 group-hover:text-primary-fixed-dim transition-colors">09:15 – 10:00</span>
+      <div class="flex flex-col">
+        <span class="font-headline-sm text-headline-sm text-text-primary font-bold group-hover:text-white transition-colors">Registration &amp; Welcome Coffee</span>
+        <span class="font-body-sm text-body-sm text-text-muted">Executive check-in and private delegate introductions</span>
+      </div>
+    </div>
+    <div class="flex items-center gap-3 self-start sm:self-auto shrink-0">
+      <span class="font-label-badge text-label-badge text-on-surface-variant bg-surface-container px-space-md py-space-xs rounded-full uppercase">Networking</span>
+      <span class="agenda-chevron material-symbols-outlined text-[20px] text-text-muted group-hover:text-primary-container">expand_more</span>
+    </div>
+  </div>
+  <div class="agenda-drawer">
+    <div class="overflow-hidden">
+      <div class="pt-4 mt-4 border-t border-surface-border/60 grid grid-cols-1 lg:grid-cols-12 gap-4 text-xs font-body-sm">
+        <div class="lg:col-span-7 flex flex-col gap-2">
+          <span class="font-kicker text-kicker uppercase text-primary-container font-semibold tracking-wider">Session Overview &amp; Experience</span>
+          <p class="text-secondary leading-relaxed">
+            Morning delegate credential verification, issuance of the executive summit kit, and an artisanal espresso lounge designed for early bilateral networking before the main keynote stage opens.
+          </p>
+          <ul class="flex flex-col gap-1 text-text-muted mt-1 font-label-code text-[11px]">
+            <li class="flex items-start gap-1.5"><span class="text-primary-container leading-none">›</span><span>Fast-track check-in with digital pass verification</span></li>
+            <li class="flex items-start gap-1.5"><span class="text-primary-container leading-none">›</span><span>Private peer introductions across industry delegations</span></li>
+            <li class="flex items-start gap-1.5"><span class="text-primary-container leading-none">›</span><span>Distribution of the official SHIFT 2026 Executive Strategy Playbook</span></li>
+          </ul>
+        </div>
+        <div class="lg:col-span-5 flex flex-col justify-between gap-3 bg-surface-container/60 p-3 rounded-lg border border-surface-border/40">
+          <div class="flex flex-col gap-2">
+            <div class="flex items-center justify-between text-text-muted font-label-code text-[11px]">
+              <span class="uppercase">Session Host</span>
+              <span class="text-secondary">Welcome Reception</span>
+            </div>
+            <div class="flex items-center gap-2.5">
+              <div class="w-8 h-8 rounded-full bg-surface-container-high border border-primary-container/30 flex items-center justify-center font-bold text-primary-container text-xs shrink-0">
+                AB
+              </div>
+              <div class="flex flex-col min-w-0">
+                <span class="font-headline-sm text-xs font-bold text-text-primary truncate">AIESEC in Bardo Organizing Committee</span>
+                <span class="text-text-muted text-[11px] truncate">Summit Concierge &amp; Host Delegations</span>
+              </div>
+            </div>
+          </div>
+          <div class="pt-2 border-t border-surface-border/40 flex items-center justify-between font-label-code text-[11px]">
+            <div class="flex items-center gap-1.5 text-text-muted">
+              <span class="material-symbols-outlined text-[15px] text-primary-container">meeting_room</span>
+              <span>Main Foyer &amp; Coffee Galleria</span>
+            </div>
+            <button type="button" class="agenda-session-cal-btn text-primary-container hover:underline inline-flex items-center gap-1 text-[11px] font-bold" data-session-title="Registration & Welcome Coffee" data-session-start="20261128T081500Z" data-session-end="20261128T090000Z" data-session-room="Main Foyer & Coffee Galleria" data-session-desc="Executive check-in and private delegate introductions at SHIFT 2026.">
+              <span class="material-symbols-outlined text-[14px]">calendar_add_on</span>
+              <span>Add to Cal</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- 10:00 Opening -->
+<div class="agenda-item group relative bg-surface-card rounded-xl p-space-md sm:p-space-lg border border-surface-border/60 hover:border-primary-container/50 hover:bg-surface-card-hover transition-all duration-300 shadow-sm cursor-pointer select-none" data-agenda-type="talks" tabindex="0">
+  <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-space-md">
+    <div class="flex items-start sm:items-center gap-space-md flex-1">
+      <span class="font-label-code text-label-code text-primary-container w-28 shrink-0 group-hover:text-primary-fixed-dim transition-colors">10:00 – 10:15</span>
+      <div class="flex flex-col">
+        <span class="font-headline-sm text-headline-sm text-text-primary font-bold group-hover:text-white transition-colors">Welcome to SHIFT</span>
+        <span class="font-body-sm text-body-sm text-text-muted">Opening ceremony led by AIESEC in Bardo Executive Committee</span>
+      </div>
+    </div>
+    <div class="flex items-center gap-3 self-start sm:self-auto shrink-0">
+      <span class="font-label-badge text-label-badge text-secondary-fixed-dim bg-surface-container px-space-md py-space-xs rounded-full uppercase">Opening Talk</span>
+      <span class="agenda-chevron material-symbols-outlined text-[20px] text-text-muted group-hover:text-primary-container">expand_more</span>
+    </div>
+  </div>
+  <div class="agenda-drawer">
+    <div class="overflow-hidden">
+      <div class="pt-4 mt-4 border-t border-surface-border/60 grid grid-cols-1 lg:grid-cols-12 gap-4 text-xs font-body-sm">
+        <div class="lg:col-span-7 flex flex-col gap-2">
+          <span class="font-kicker text-kicker uppercase text-primary-container font-semibold tracking-wider">Summit Framing &amp; Vision</span>
+          <p class="text-secondary leading-relaxed">
+            Framing the executive thesis of SHIFT: why commercial deployment and bottom-line transformation supersede speculative tech demonstrations. Overview of the day's governance and interactive delegate participation channels.
+          </p>
+          <ul class="flex flex-col gap-1 text-text-muted mt-1 font-label-code text-[11px]">
+            <li class="flex items-start gap-1.5"><span class="text-primary-container leading-none">›</span><span>Strategic vision for Tunisia as an AI deployment hub in EMEA</span></li>
+            <li class="flex items-start gap-1.5"><span class="text-primary-container leading-none">›</span><span>Summit rules of engagement: strictly strategic enterprise discussion</span></li>
+            <li class="flex items-start gap-1.5"><span class="text-primary-container leading-none">›</span><span>Introduction of guest institutional delegations and enterprise partners</span></li>
+          </ul>
+        </div>
+        <div class="lg:col-span-5 flex flex-col justify-between gap-3 bg-surface-container/60 p-3 rounded-lg border border-surface-border/40">
+          <div class="flex flex-col gap-2">
+            <div class="flex items-center justify-between text-text-muted font-label-code text-[11px]">
+              <span class="uppercase">Opening Address</span>
+              <span class="text-secondary">Executive Board</span>
+            </div>
+            <div class="flex items-center gap-2.5">
+              <div class="w-8 h-8 rounded-full bg-surface-container-high border border-primary-container/30 flex items-center justify-center font-bold text-primary-container text-xs shrink-0">
+                EB
+              </div>
+              <div class="flex flex-col min-w-0">
+                <span class="font-headline-sm text-xs font-bold text-text-primary truncate">President &amp; Steering Committee</span>
+                <span class="text-text-muted text-[11px] truncate">AIESEC in Bardo Summit Governance</span>
+              </div>
+            </div>
+          </div>
+          <div class="pt-2 border-t border-surface-border/40 flex items-center justify-between font-label-code text-[11px]">
+            <div class="flex items-center gap-1.5 text-text-muted">
+              <span class="material-symbols-outlined text-[15px] text-primary-container">meeting_room</span>
+              <span>Grand Plenary Amphitheatre</span>
+            </div>
+            <button type="button" class="agenda-session-cal-btn text-primary-container hover:underline inline-flex items-center gap-1 text-[11px] font-bold" data-session-title="Welcome to SHIFT" data-session-start="20261128T090000Z" data-session-end="20261128T091500Z" data-session-room="Grand Plenary Amphitheatre" data-session-desc="Official opening ceremony and summit thesis presentation.">
+              <span class="material-symbols-outlined text-[14px]">calendar_add_on</span>
+              <span>Add to Cal</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- 10:15 Keynote -->
+<div class="agenda-item group relative bg-surface-card rounded-xl p-space-md sm:p-space-lg border border-surface-border/60 hover:border-primary-container/50 hover:bg-surface-card-hover transition-all duration-300 shadow-sm cursor-pointer select-none" data-agenda-type="talks" tabindex="0">
+  <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-space-md">
+    <div class="flex items-start sm:items-center gap-space-md flex-1">
+      <span class="font-label-code text-label-code text-primary-container w-28 shrink-0 group-hover:text-primary-fixed-dim transition-colors">10:15 – 11:00</span>
+      <div class="flex flex-col">
+        <span class="font-headline-sm text-headline-sm text-text-primary font-bold group-hover:text-white transition-colors">AI Is Changing Business</span>
+        <span class="font-body-sm text-body-sm text-text-muted">Unpacking ROI, corporate structural shifts, and macro adoption</span>
+      </div>
+    </div>
+    <div class="flex items-center gap-3 self-start sm:self-auto shrink-0">
+      <span class="font-label-badge text-label-badge text-primary-container bg-glow-lime px-space-md py-space-xs rounded-full uppercase font-bold">Keynote</span>
+      <span class="agenda-chevron material-symbols-outlined text-[20px] text-text-muted group-hover:text-primary-container">expand_more</span>
+    </div>
+  </div>
+  <div class="agenda-drawer">
+    <div class="overflow-hidden">
+      <div class="pt-4 mt-4 border-t border-surface-border/60 grid grid-cols-1 lg:grid-cols-12 gap-4 text-xs font-body-sm">
+        <div class="lg:col-span-7 flex flex-col gap-2">
+          <span class="font-kicker text-kicker uppercase text-primary-container font-semibold tracking-wider">Keynote Strategic Takeaways</span>
+          <p class="text-secondary leading-relaxed">
+            Delivering an unflinching executive breakdown of how machine intelligence transforms operational margins, capital allocation strategies, and headcount models. Transitioning cost centers into automated high-output engines.
+          </p>
+          <ul class="flex flex-col gap-1 text-text-muted mt-1 font-label-code text-[11px]">
+            <li class="flex items-start gap-1.5"><span class="text-primary-container leading-none">›</span><span>Calculating true AI ROI models and avoiding multi-year sunk capital traps</span></li>
+            <li class="flex items-start gap-1.5"><span class="text-primary-container leading-none">›</span><span>Restructuring enterprise workflows around autonomous agent workforces</span></li>
+            <li class="flex items-start gap-1.5"><span class="text-primary-container leading-none">›</span><span>Live 10-minute executive Q&amp;A directly with the keynote speaker</span></li>
+          </ul>
+        </div>
+        <div class="lg:col-span-5 flex flex-col justify-between gap-3 bg-surface-container/60 p-3 rounded-lg border border-surface-border/40">
+          <div class="flex flex-col gap-2">
+            <div class="flex items-center justify-between text-text-muted font-label-code text-[11px]">
+              <span class="uppercase">Keynote Speaker</span>
+              <span class="text-primary-container font-bold">Featured Faculty</span>
+            </div>
+            <div class="flex items-center gap-2.5">
+              <div class="w-8 h-8 rounded-full bg-primary-container/20 border border-primary-container/50 flex items-center justify-center font-bold text-primary-container text-xs shrink-0">
+                KS
+              </div>
+              <div class="flex flex-col min-w-0">
+                <span class="font-headline-sm text-xs font-bold text-text-primary truncate">Executive Keynote Speaker</span>
+                <span class="text-text-muted text-[11px] truncate">Founder &amp; CEO · Enterprise AI Scaleup</span>
+              </div>
+            </div>
+          </div>
+          <div class="pt-2 border-t border-surface-border/40 flex items-center justify-between font-label-code text-[11px]">
+            <div class="flex items-center gap-1.5 text-text-muted">
+              <span class="material-symbols-outlined text-[15px] text-primary-container">meeting_room</span>
+              <span>Grand Plenary Amphitheatre</span>
+            </div>
+            <button type="button" class="agenda-session-cal-btn text-primary-container hover:underline inline-flex items-center gap-1 text-[11px] font-bold" data-session-title="Keynote: AI Is Changing Business" data-session-start="20261128T091500Z" data-session-end="20261128T100000Z" data-session-room="Grand Plenary Amphitheatre" data-session-desc="Keynote address unpacking ROI, corporate structural shifts, and macro AI adoption.">
+              <span class="material-symbols-outlined text-[14px]">calendar_add_on</span>
+              <span>Add to Cal</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- 11:00 SHIFT Break -->
+<div class="agenda-item group relative bg-surface-card rounded-xl p-space-md sm:p-space-lg border border-surface-border/60 hover:border-primary-container/50 hover:bg-surface-card-hover transition-all duration-300 shadow-sm cursor-pointer select-none" data-agenda-type="networking" tabindex="0">
+  <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-space-md">
+    <div class="flex items-start sm:items-center gap-space-md flex-1">
+      <span class="font-label-code text-label-code text-text-muted w-28 shrink-0 group-hover:text-primary-fixed-dim transition-colors">11:00 – 11:30</span>
+      <div class="flex flex-col">
+        <span class="font-headline-sm text-headline-sm text-text-primary font-bold group-hover:text-white transition-colors">SHIFT Break</span>
+        <span class="font-body-sm text-body-sm text-text-muted">Structured salon discussions and refresh station</span>
+      </div>
+    </div>
+    <div class="flex items-center gap-3 self-start sm:self-auto shrink-0">
+      <span class="font-label-badge text-label-badge text-on-surface-variant bg-surface-container px-space-md py-space-xs rounded-full uppercase">Networking</span>
+      <span class="agenda-chevron material-symbols-outlined text-[20px] text-text-muted group-hover:text-primary-container">expand_more</span>
+    </div>
+  </div>
+  <div class="agenda-drawer">
+    <div class="overflow-hidden">
+      <div class="pt-4 mt-4 border-t border-surface-border/60 grid grid-cols-1 lg:grid-cols-12 gap-4 text-xs font-body-sm">
+        <div class="lg:col-span-7 flex flex-col gap-2">
+          <span class="font-kicker text-kicker uppercase text-primary-container font-semibold tracking-wider">Themed Salon Roundtables</span>
+          <p class="text-secondary leading-relaxed">
+            Curated roundtable tables grouped by sector vertical (Fintech &amp; Banking, Healthtech &amp; Bio, Logistics, Machine Learning Infrastructure). Facilitated debate debriefing the morning keynote.
+          </p>
+          <ul class="flex flex-col gap-1 text-text-muted mt-1 font-label-code text-[11px]">
+            <li class="flex items-start gap-1.5"><span class="text-primary-container leading-none">›</span><span>Dedicated speaker access lounge for follow-up dialogues</span></li>
+            <li class="flex items-start gap-1.5"><span class="text-primary-container leading-none">›</span><span>Specialty coffee, organic infusions, and artisan refreshments</span></li>
+            <li class="flex items-start gap-1.5"><span class="text-primary-container leading-none">›</span><span>Rapid exchange of corporate AI implementation playbooks</span></li>
+          </ul>
+        </div>
+        <div class="lg:col-span-5 flex flex-col justify-between gap-3 bg-surface-container/60 p-3 rounded-lg border border-surface-border/40">
+          <div class="flex flex-col gap-2">
+            <div class="flex items-center justify-between text-text-muted font-label-code text-[11px]">
+              <span class="uppercase">Format</span>
+              <span class="text-secondary">Peer Roundtables</span>
+            </div>
+            <div class="flex items-center gap-2.5">
+              <div class="w-8 h-8 rounded-full bg-surface-container-high border border-primary-container/30 flex items-center justify-center font-bold text-primary-container text-xs shrink-0">
+                <span class="material-symbols-outlined text-[16px]">coffee</span>
+              </div>
+              <div class="flex flex-col min-w-0">
+                <span class="font-headline-sm text-xs font-bold text-text-primary truncate">Executive Salon Debrief</span>
+                <span class="text-text-muted text-[11px] truncate">Sector Roundtables &amp; Refresh Station</span>
+              </div>
+            </div>
+          </div>
+          <div class="pt-2 border-t border-surface-border/40 flex items-center justify-between font-label-code text-[11px]">
+            <div class="flex items-center gap-1.5 text-text-muted">
+              <span class="material-symbols-outlined text-[15px] text-primary-container">meeting_room</span>
+              <span>Executive Lounge &amp; Galleria</span>
+            </div>
+            <button type="button" class="agenda-session-cal-btn text-primary-container hover:underline inline-flex items-center gap-1 text-[11px] font-bold" data-session-title="SHIFT Morning Break & Salon" data-session-start="20261128T100000Z" data-session-end="20261128T103000Z" data-session-room="Executive Lounge & Galleria" data-session-desc="Structured salon discussions and refresh station at SHIFT 2026.">
+              <span class="material-symbols-outlined text-[14px]">calendar_add_on</span>
+              <span>Add to Cal</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- 11:30 Business Cases -->
+<div class="agenda-item group relative bg-surface-card rounded-xl p-space-md sm:p-space-lg border border-surface-border/60 hover:border-primary-container/50 hover:bg-surface-card-hover transition-all duration-300 shadow-sm cursor-pointer select-none" data-agenda-type="talks" tabindex="0">
+  <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-space-md">
+    <div class="flex items-start sm:items-center gap-space-md flex-1">
+      <span class="font-label-code text-label-code text-primary-container w-28 shrink-0 group-hover:text-primary-fixed-dim transition-colors">11:30 – 12:15</span>
+      <div class="flex flex-col">
+        <span class="font-headline-sm text-headline-sm text-text-primary font-bold group-hover:text-white transition-colors">AI in the Real World</span>
+        <span class="font-body-sm text-body-sm text-text-muted">Deep dive into successful cross-sector enterprise implementations</span>
+      </div>
+    </div>
+    <div class="flex items-center gap-3 self-start sm:self-auto shrink-0">
+      <span class="font-label-badge text-label-badge text-secondary-fixed-dim bg-surface-container px-space-md py-space-xs rounded-full uppercase">Business Cases</span>
+      <span class="agenda-chevron material-symbols-outlined text-[20px] text-text-muted group-hover:text-primary-container">expand_more</span>
+    </div>
+  </div>
+  <div class="agenda-drawer">
+    <div class="overflow-hidden">
+      <div class="pt-4 mt-4 border-t border-surface-border/60 grid grid-cols-1 lg:grid-cols-12 gap-4 text-xs font-body-sm">
+        <div class="lg:col-span-7 flex flex-col gap-2">
+          <span class="font-kicker text-kicker uppercase text-primary-container font-semibold tracking-wider">Production Case Breakdown</span>
+          <p class="text-secondary leading-relaxed">
+            Real telemetry from over 50 enterprise implementations across banking, telecommunications, and retail logistics. An honest examination of why 80% of experimental pilots fail before reaching production and what makes the surviving 20% succeed.
+          </p>
+          <ul class="flex flex-col gap-1 text-text-muted mt-1 font-label-code text-[11px]">
+            <li class="flex items-start gap-1.5"><span class="text-primary-container leading-none">›</span><span>Automated underwriting, fraud analysis, and customer triage pipelines</span></li>
+            <li class="flex items-start gap-1.5"><span class="text-primary-container leading-none">›</span><span>Data governance hurdles and mitigating compliance friction in regulated industries</span></li>
+            <li class="flex items-start gap-1.5"><span class="text-primary-container leading-none">›</span><span>Live telemetry metrics comparing pre-AI vs post-AI turnaround speeds</span></li>
+          </ul>
+        </div>
+        <div class="lg:col-span-5 flex flex-col justify-between gap-3 bg-surface-container/60 p-3 rounded-lg border border-surface-border/40">
+          <div class="flex flex-col gap-2">
+            <div class="flex items-center justify-between text-text-muted font-label-code text-[11px]">
+              <span class="uppercase">Case Speaker</span>
+              <span class="text-secondary">Enterprise Systems</span>
+            </div>
+            <div class="flex items-center gap-2.5">
+              <div class="w-8 h-8 rounded-full bg-surface-container-high border border-primary-container/30 flex items-center justify-center font-bold text-primary-container text-xs shrink-0">
+                EA
+              </div>
+              <div class="flex flex-col min-w-0">
+                <span class="font-headline-sm text-xs font-bold text-text-primary truncate">Enterprise Growth Architect</span>
+                <span class="text-text-muted text-[11px] truncate">Head of Growth &amp; Automation · Fintech Scaleup</span>
+              </div>
+            </div>
+          </div>
+          <div class="pt-2 border-t border-surface-border/40 flex items-center justify-between font-label-code text-[11px]">
+            <div class="flex items-center gap-1.5 text-text-muted">
+              <span class="material-symbols-outlined text-[15px] text-primary-container">meeting_room</span>
+              <span>Grand Plenary Amphitheatre</span>
+            </div>
+            <button type="button" class="agenda-session-cal-btn text-primary-container hover:underline inline-flex items-center gap-1 text-[11px] font-bold" data-session-title="AI in the Real World: Enterprise Cases" data-session-start="20261128T103000Z" data-session-end="20261128T111500Z" data-session-room="Grand Plenary Amphitheatre" data-session-desc="Deep dive into enterprise rollouts, risk models, and practical data frameworks.">
+              <span class="material-symbols-outlined text-[14px]">calendar_add_on</span>
+              <span>Add to Cal</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- 12:15 Networking Space -->
+<div class="agenda-item group relative bg-surface-card rounded-xl p-space-md sm:p-space-lg border border-surface-border/60 hover:border-primary-container/50 hover:bg-surface-card-hover transition-all duration-300 shadow-sm cursor-pointer select-none" data-agenda-type="networking" tabindex="0">
+  <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-space-md">
+    <div class="flex items-start sm:items-center gap-space-md flex-1">
+      <span class="font-label-code text-label-code text-primary-container w-28 shrink-0 group-hover:text-primary-fixed-dim transition-colors">12:15 – 13:15</span>
+      <div class="flex flex-col">
+        <span class="font-headline-sm text-headline-sm text-text-primary font-bold group-hover:text-white transition-colors">SHIFT Networking Space</span>
+        <span class="font-body-sm text-body-sm text-text-muted">Bilateral company-student dialogues &amp; partner exhibition lounge</span>
+      </div>
+    </div>
+    <div class="flex items-center gap-3 self-start sm:self-auto shrink-0">
+      <span class="font-label-badge text-label-badge text-on-surface-variant bg-surface-container px-space-md py-space-xs rounded-full uppercase">Networking</span>
+      <span class="agenda-chevron material-symbols-outlined text-[20px] text-text-muted group-hover:text-primary-container">expand_more</span>
+    </div>
+  </div>
+  <div class="agenda-drawer">
+    <div class="overflow-hidden">
+      <div class="pt-4 mt-4 border-t border-surface-border/60 grid grid-cols-1 lg:grid-cols-12 gap-4 text-xs font-body-sm">
+        <div class="lg:col-span-7 flex flex-col gap-2">
+          <span class="font-kicker text-kicker uppercase text-primary-container font-semibold tracking-wider">Executive &amp; Talent Exchange</span>
+          <p class="text-secondary leading-relaxed">
+            The summit's premier engagement forum: high-density bilateral dialogues between enterprise founders, venture scouts, and selected elite student delegates. Full partner technology demonstration pavilions and seated luncheon service.
+          </p>
+          <ul class="flex flex-col gap-1 text-text-muted mt-1 font-label-code text-[11px]">
+            <li class="flex items-start gap-1.5"><span class="text-primary-container leading-none">›</span><span>Direct bilateral hiring and research project matchmaking</span></li>
+            <li class="flex items-start gap-1.5"><span class="text-primary-container leading-none">›</span><span>Exclusive technology product demos at sponsor partner lounges</span></li>
+            <li class="flex items-start gap-1.5"><span class="text-primary-container leading-none">›</span><span>Curated Mediterranean standing buffet and executive refreshments</span></li>
+          </ul>
+        </div>
+        <div class="lg:col-span-5 flex flex-col justify-between gap-3 bg-surface-container/60 p-3 rounded-lg border border-surface-border/40">
+          <div class="flex flex-col gap-2">
+            <div class="flex items-center justify-between text-text-muted font-label-code text-[11px]">
+              <span class="uppercase">Exchange Track</span>
+              <span class="text-secondary">Partners &amp; Delegates</span>
+            </div>
+            <div class="flex items-center gap-2.5">
+              <div class="w-8 h-8 rounded-full bg-surface-container-high border border-primary-container/30 flex items-center justify-center font-bold text-primary-container text-xs shrink-0">
+                <span class="material-symbols-outlined text-[16px]">groups</span>
+              </div>
+              <div class="flex flex-col min-w-0">
+                <span class="font-headline-sm text-xs font-bold text-text-primary truncate">Partner Exhibition Lounge</span>
+                <span class="text-text-muted text-[11px] truncate">Bilateral Enterprise-Student Dialogue</span>
+              </div>
+            </div>
+          </div>
+          <div class="pt-2 border-t border-surface-border/40 flex items-center justify-between font-label-code text-[11px]">
+            <div class="flex items-center gap-1.5 text-text-muted">
+              <span class="material-symbols-outlined text-[15px] text-primary-container">meeting_room</span>
+              <span>Main Exhibition Hall &amp; Lounges</span>
+            </div>
+            <button type="button" class="agenda-session-cal-btn text-primary-container hover:underline inline-flex items-center gap-1 text-[11px] font-bold" data-session-title="SHIFT Networking Space & Luncheon" data-session-start="20261128T111500Z" data-session-end="20261128T121500Z" data-session-room="Main Exhibition Hall & Lounges" data-session-desc="Bilateral company-student dialogues and partner exhibition lounge at SHIFT 2026.">
+              <span class="material-symbols-outlined text-[14px]">calendar_add_on</span>
+              <span>Add to Cal</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- 13:15 Partner Spotlight -->
+<div class="agenda-item group relative bg-surface-card rounded-xl p-space-md sm:p-space-lg border border-surface-border/60 hover:border-primary-container/50 hover:bg-surface-card-hover transition-all duration-300 shadow-sm cursor-pointer select-none" data-agenda-type="talks" tabindex="0">
+  <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-space-md">
+    <div class="flex items-start sm:items-center gap-space-md flex-1">
+      <span class="font-label-code text-label-code text-primary-container w-28 shrink-0 group-hover:text-primary-fixed-dim transition-colors">13:15 – 13:45</span>
+      <div class="flex flex-col">
+        <span class="font-headline-sm text-headline-sm text-text-primary font-bold group-hover:text-white transition-colors">Partner Spotlight</span>
+        <span class="font-body-sm text-body-sm text-text-muted">Exclusive technology demonstration and industry address</span>
+      </div>
+    </div>
+    <div class="flex items-center gap-3 self-start sm:self-auto shrink-0">
+      <span class="font-label-badge text-label-badge text-primary-container bg-surface-container px-space-md py-space-xs rounded-full uppercase">Partner Presentation</span>
+      <span class="agenda-chevron material-symbols-outlined text-[20px] text-text-muted group-hover:text-primary-container">expand_more</span>
+    </div>
+  </div>
+  <div class="agenda-drawer">
+    <div class="overflow-hidden">
+      <div class="pt-4 mt-4 border-t border-surface-border/60 grid grid-cols-1 lg:grid-cols-12 gap-4 text-xs font-body-sm">
+        <div class="lg:col-span-7 flex flex-col gap-2">
+          <span class="font-kicker text-kicker uppercase text-primary-container font-semibold tracking-wider">Enterprise Tech Demonstration</span>
+          <p class="text-secondary leading-relaxed">
+            Live technical showcase by summit anchor technology partners. Deep-dive into localized model weights, private datacenter infrastructure, and enterprise data privacy orchestration across North African corporate clients.
+          </p>
+          <ul class="flex flex-col gap-1 text-text-muted mt-1 font-label-code text-[11px]">
+            <li class="flex items-start gap-1.5"><span class="text-primary-container leading-none">›</span><span>Benchmarking open-source foundational models vs proprietary commercial APIs</span></li>
+            <li class="flex items-start gap-1.5"><span class="text-primary-container leading-none">›</span><span>On-premise GPU clusters and low-latency inference pipelines</span></li>
+            <li class="flex items-start gap-1.5"><span class="text-primary-container leading-none">›</span><span>Commercial launch announcements and delegate pilot access grants</span></li>
+          </ul>
+        </div>
+        <div class="lg:col-span-5 flex flex-col justify-between gap-3 bg-surface-container/60 p-3 rounded-lg border border-surface-border/40">
+          <div class="flex flex-col gap-2">
+            <div class="flex items-center justify-between text-text-muted font-label-code text-[11px]">
+              <span class="uppercase">Presenting Partner</span>
+              <span class="text-primary-container font-bold">Tech Anchor</span>
+            </div>
+            <div class="flex items-center gap-2.5">
+              <div class="w-8 h-8 rounded-full bg-surface-container-high border border-primary-container/30 flex items-center justify-center font-bold text-primary-container text-xs shrink-0">
+                PT
+              </div>
+              <div class="flex flex-col min-w-0">
+                <span class="font-headline-sm text-xs font-bold text-text-primary truncate">Headline Partner Delegations</span>
+                <span class="text-text-muted text-[11px] truncate">Engineering &amp; Solutions Architecture</span>
+              </div>
+            </div>
+          </div>
+          <div class="pt-2 border-t border-surface-border/40 flex items-center justify-between font-label-code text-[11px]">
+            <div class="flex items-center gap-1.5 text-text-muted">
+              <span class="material-symbols-outlined text-[15px] text-primary-container">meeting_room</span>
+              <span>Grand Plenary Amphitheatre</span>
+            </div>
+            <button type="button" class="agenda-session-cal-btn text-primary-container hover:underline inline-flex items-center gap-1 text-[11px] font-bold" data-session-title="Partner Spotlight: Technology Demonstration" data-session-start="20261128T121500Z" data-session-end="20261128T124500Z" data-session-room="Grand Plenary Amphitheatre" data-session-desc="Exclusive enterprise partner technology demonstration and architecture showcase.">
+              <span class="material-symbols-outlined text-[14px]">calendar_add_on</span>
+              <span>Add to Cal</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- 13:45 Speaker Talk -->
+<div class="agenda-item group relative bg-surface-card rounded-xl p-space-md sm:p-space-lg border border-surface-border/60 hover:border-primary-container/50 hover:bg-surface-card-hover transition-all duration-300 shadow-sm cursor-pointer select-none" data-agenda-type="talks" tabindex="0">
+  <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-space-md">
+    <div class="flex items-start sm:items-center gap-space-md flex-1">
+      <span class="font-label-code text-label-code text-primary-container w-28 shrink-0 group-hover:text-primary-fixed-dim transition-colors">13:45 – 14:30</span>
+      <div class="flex flex-col">
+        <span class="font-headline-sm text-headline-sm text-text-primary font-bold group-hover:text-white transition-colors">Building with AI, Not Just Talking About It</span>
+        <span class="font-body-sm text-body-sm text-text-muted">Pragmatic product frameworks and operational engineering playbooks</span>
+      </div>
+    </div>
+    <div class="flex items-center gap-3 self-start sm:self-auto shrink-0">
+      <span class="font-label-badge text-label-badge text-secondary-fixed-dim bg-surface-container px-space-md py-space-xs rounded-full uppercase">Speaker Talk</span>
+      <span class="agenda-chevron material-symbols-outlined text-[20px] text-text-muted group-hover:text-primary-container">expand_more</span>
+    </div>
+  </div>
+  <div class="agenda-drawer">
+    <div class="overflow-hidden">
+      <div class="pt-4 mt-4 border-t border-surface-border/60 grid grid-cols-1 lg:grid-cols-12 gap-4 text-xs font-body-sm">
+        <div class="lg:col-span-7 flex flex-col gap-2">
+          <span class="font-kicker text-kicker uppercase text-primary-container font-semibold tracking-wider">Engineering Architecture Playbook</span>
+          <p class="text-secondary leading-relaxed">
+            Concrete system architecture blueprints for production machine learning: balancing multi-agent orchestration latency, contextual retrieval pipelines (RAG), and strict compute cost governance under real-world traffic.
+          </p>
+          <ul class="flex flex-col gap-1 text-text-muted mt-1 font-label-code text-[11px]">
+            <li class="flex items-start gap-1.5"><span class="text-primary-container leading-none">›</span><span>Agentic decision loops vs deterministic rules: architectural boundaries</span></li>
+            <li class="flex items-start gap-1.5"><span class="text-primary-container leading-none">›</span><span>Fine-tuning vs continuous context caching cost-benefit breakdowns</span></li>
+            <li class="flex items-start gap-1.5"><span class="text-primary-container leading-none">›</span><span>Hardening LLM security against prompt injection in production backends</span></li>
+          </ul>
+        </div>
+        <div class="lg:col-span-5 flex flex-col justify-between gap-3 bg-surface-container/60 p-3 rounded-lg border border-surface-border/40">
+          <div class="flex flex-col gap-2">
+            <div class="flex items-center justify-between text-text-muted font-label-code text-[11px]">
+              <span class="uppercase">Featured Architect</span>
+              <span class="text-secondary">Engineering Lead</span>
+            </div>
+            <div class="flex items-center gap-2.5">
+              <div class="w-8 h-8 rounded-full bg-surface-container-high border border-primary-container/30 flex items-center justify-center font-bold text-primary-container text-xs shrink-0">
+                LP
+              </div>
+              <div class="flex flex-col min-w-0">
+                <span class="font-headline-sm text-xs font-bold text-text-primary truncate">Lead Product Architect</span>
+                <span class="text-text-muted text-[11px] truncate">Deep Learning Infrastructure &amp; Systems</span>
+              </div>
+            </div>
+          </div>
+          <div class="pt-2 border-t border-surface-border/40 flex items-center justify-between font-label-code text-[11px]">
+            <div class="flex items-center gap-1.5 text-text-muted">
+              <span class="material-symbols-outlined text-[15px] text-primary-container">meeting_room</span>
+              <span>Grand Plenary Amphitheatre</span>
+            </div>
+            <button type="button" class="agenda-session-cal-btn text-primary-container hover:underline inline-flex items-center gap-1 text-[11px] font-bold" data-session-title="Building with AI: Engineering Playbooks" data-session-start="20261128T124500Z" data-session-end="20261128T133000Z" data-session-room="Grand Plenary Amphitheatre" data-session-desc="Pragmatic product frameworks and operational engineering playbooks.">
+              <span class="material-symbols-outlined text-[14px]">calendar_add_on</span>
+              <span>Add to Cal</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- 14:30 Highlight Grand Panel -->
+<div class="agenda-item group relative bg-surface-card rounded-xl p-space-md sm:p-space-lg border border-surface-border/60 hover:border-primary-container/50 hover:bg-surface-card-hover transition-all duration-300 shadow-[0_0_20px_rgba(205,241,72,0.08)] cursor-pointer select-none" data-agenda-type="talks" tabindex="0">
+  <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-space-md">
+    <div class="flex items-start sm:items-center gap-space-md flex-1">
+      <span class="font-label-code text-label-code text-primary-container font-bold w-28 shrink-0 group-hover:text-primary-fixed-dim transition-colors">14:30 – 15:15</span>
+      <div class="flex flex-col">
+        <div class="flex items-center gap-space-xs">
+          <span class="font-headline-sm text-headline-sm text-text-primary font-extrabold group-hover:text-white transition-colors">AI × Business: The Big Conversation</span>
+          <span class="material-symbols-outlined text-primary-container text-[18px]">verified</span>
+        </div>
+        <span class="font-body-sm text-body-sm text-text-muted">C-suite leaders debate capital allocation, workforce evolution, and sovereignty</span>
+      </div>
+    </div>
+    <div class="flex items-center gap-3 self-start sm:self-auto shrink-0">
+      <span class="font-label-badge text-label-badge text-on-primary bg-primary-container px-space-md py-space-xs rounded-full uppercase font-bold">Discussion Panel</span>
+      <span class="agenda-chevron material-symbols-outlined text-[20px] text-text-muted group-hover:text-primary-container">expand_more</span>
+    </div>
+  </div>
+  <div class="agenda-drawer">
+    <div class="overflow-hidden">
+      <div class="pt-4 mt-4 border-t border-surface-border/60 grid grid-cols-1 lg:grid-cols-12 gap-4 text-xs font-body-sm">
+        <div class="lg:col-span-7 flex flex-col gap-2">
+          <span class="font-kicker text-kicker uppercase text-primary-container font-semibold tracking-wider">Flagship Summit Plenary</span>
+          <p class="text-secondary leading-relaxed">
+            The headline debate of SHIFT 2026. Managing partners from top Pan-African venture capital funds convene with regional enterprise CEOs to debate talent flight, national model sovereignty, and where capital allocators see durable competitive defensibility.
+          </p>
+          <ul class="flex flex-col gap-1 text-text-muted mt-1 font-label-code text-[11px]">
+            <li class="flex items-start gap-1.5"><span class="text-primary-container leading-none">›</span><span>Venture capital evaluation of AI startups: wrappers vs proprietary defensibility</span></li>
+            <li class="flex items-start gap-1.5"><span class="text-primary-container leading-none">›</span><span>Retention strategies for North African senior engineering and AI talent</span></li>
+            <li class="flex items-start gap-1.5"><span class="text-primary-container leading-none">›</span><span>Live anonymous delegate polling and direct stage question dispatch</span></li>
+          </ul>
+        </div>
+        <div class="lg:col-span-5 flex flex-col justify-between gap-3 bg-surface-container/60 p-3 rounded-lg border border-surface-border/40">
+          <div class="flex flex-col gap-2">
+            <div class="flex items-center justify-between text-text-muted font-label-code text-[11px]">
+              <span class="uppercase">Panel Faculty</span>
+              <span class="text-primary-container font-bold">Headline Session</span>
+            </div>
+            <div class="flex items-center gap-2.5">
+              <div class="w-8 h-8 rounded-full bg-primary-container/20 border border-primary-container/50 flex items-center justify-center font-bold text-primary-container text-xs shrink-0">
+                VC
+              </div>
+              <div class="flex flex-col min-w-0">
+                <span class="font-headline-sm text-xs font-bold text-text-primary truncate">Venture Capital &amp; C-Suite Panelists</span>
+                <span class="text-text-muted text-[11px] truncate">Pan-African VC, Telco &amp; Banking Executives</span>
+              </div>
+            </div>
+          </div>
+          <div class="pt-2 border-t border-surface-border/40 flex items-center justify-between font-label-code text-[11px]">
+            <div class="flex items-center gap-1.5 text-text-muted">
+              <span class="material-symbols-outlined text-[15px] text-primary-container">meeting_room</span>
+              <span>Grand Plenary Amphitheatre</span>
+            </div>
+            <button type="button" class="agenda-session-cal-btn text-primary-container hover:underline inline-flex items-center gap-1 text-[11px] font-bold" data-session-title="Flagship Panel: AI × Business - The Big Conversation" data-session-start="20261128T133000Z" data-session-end="20261128T141500Z" data-session-room="Grand Plenary Amphitheatre" data-session-desc="C-suite leaders debate capital allocation, workforce evolution, and sovereignty.">
+              <span class="material-symbols-outlined text-[14px]">calendar_add_on</span>
+              <span>Add to Cal</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- 15:15 SHIFT Break -->
+<div class="agenda-item group relative bg-surface-card rounded-xl p-space-md sm:p-space-lg border border-surface-border/60 hover:border-primary-container/50 hover:bg-surface-card-hover transition-all duration-300 shadow-sm cursor-pointer select-none" data-agenda-type="networking" tabindex="0">
+  <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-space-md">
+    <div class="flex items-start sm:items-center gap-space-md flex-1">
+      <span class="font-label-code text-label-code text-text-muted w-28 shrink-0 group-hover:text-primary-fixed-dim transition-colors">15:15 – 15:45</span>
+      <div class="flex flex-col">
+        <span class="font-headline-sm text-headline-sm text-text-primary font-bold group-hover:text-white transition-colors">SHIFT Break</span>
+        <span class="font-body-sm text-body-sm text-text-muted">Informal debriefing &amp; coffee recharge</span>
+      </div>
+    </div>
+    <div class="flex items-center gap-3 self-start sm:self-auto shrink-0">
+      <span class="font-label-badge text-label-badge text-on-surface-variant bg-surface-container px-space-md py-space-xs rounded-full uppercase">Networking</span>
+      <span class="agenda-chevron material-symbols-outlined text-[20px] text-text-muted group-hover:text-primary-container">expand_more</span>
+    </div>
+  </div>
+  <div class="agenda-drawer">
+    <div class="overflow-hidden">
+      <div class="pt-4 mt-4 border-t border-surface-border/60 grid grid-cols-1 lg:grid-cols-12 gap-4 text-xs font-body-sm">
+        <div class="lg:col-span-7 flex flex-col gap-2">
+          <span class="font-kicker text-kicker uppercase text-primary-container font-semibold tracking-wider">Afternoon Debrief &amp; Recharge</span>
+          <p class="text-secondary leading-relaxed">
+            Afternoon espresso service and informal breakout discussions. Delegates debrief the flagship plenary conclusions and prepare practical problem prompts ahead of the hands-on interactive workshop.
+          </p>
+          <ul class="flex flex-col gap-1 text-text-muted mt-1 font-label-code text-[11px]">
+            <li class="flex items-start gap-1.5"><span class="text-primary-container leading-none">›</span><span>Speed networking rotations with panel participants</span></li>
+            <li class="flex items-start gap-1.5"><span class="text-primary-container leading-none">›</span><span>Worksheet kit distribution for the upcoming interactive lab</span></li>
+            <li class="flex items-start gap-1.5"><span class="text-primary-container leading-none">›</span><span>Fresh tea, espresso recharge, and executive patisserie</span></li>
+          </ul>
+        </div>
+        <div class="lg:col-span-5 flex flex-col justify-between gap-3 bg-surface-container/60 p-3 rounded-lg border border-surface-border/40">
+          <div class="flex flex-col gap-2">
+            <div class="flex items-center justify-between text-text-muted font-label-code text-[11px]">
+              <span class="uppercase">Format</span>
+              <span class="text-secondary">Informal Recharge</span>
+            </div>
+            <div class="flex items-center gap-2.5">
+              <div class="w-8 h-8 rounded-full bg-surface-container-high border border-primary-container/30 flex items-center justify-center font-bold text-primary-container text-xs shrink-0">
+                <span class="material-symbols-outlined text-[16px]">local_cafe</span>
+              </div>
+              <div class="flex flex-col min-w-0">
+                <span class="font-headline-sm text-xs font-bold text-text-primary truncate">Executive Espresso Pause</span>
+                <span class="text-text-muted text-[11px] truncate">Pre-Workshop Matchmaking</span>
+              </div>
+            </div>
+          </div>
+          <div class="pt-2 border-t border-surface-border/40 flex items-center justify-between font-label-code text-[11px]">
+            <div class="flex items-center gap-1.5 text-text-muted">
+              <span class="material-symbols-outlined text-[15px] text-primary-container">meeting_room</span>
+              <span>Executive Lounge &amp; Galleria</span>
+            </div>
+            <button type="button" class="agenda-session-cal-btn text-primary-container hover:underline inline-flex items-center gap-1 text-[11px] font-bold" data-session-title="SHIFT Afternoon Break" data-session-start="20261128T141500Z" data-session-end="20261128T144500Z" data-session-room="Executive Lounge & Galleria" data-session-desc="Informal debriefing & coffee recharge before interactive workshop.">
+              <span class="material-symbols-outlined text-[14px]">calendar_add_on</span>
+              <span>Add to Cal</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- 15:45 Interactive Workshop -->
+<div class="agenda-item group relative bg-surface-card rounded-xl p-space-md sm:p-space-lg border border-surface-border/60 hover:border-primary-container/50 hover:bg-surface-card-hover transition-all duration-300 shadow-sm cursor-pointer select-none" data-agenda-type="workshop" tabindex="0">
+  <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-space-md">
+    <div class="flex items-start sm:items-center gap-space-md flex-1">
+      <span class="font-label-code text-label-code text-primary-container w-28 shrink-0 group-hover:text-primary-fixed-dim transition-colors">15:45 – 16:30</span>
+      <div class="flex flex-col">
+        <span class="font-headline-sm text-headline-sm text-text-primary font-bold group-hover:text-white transition-colors">Your Business, SHIFTed</span>
+        <span class="font-body-sm text-body-sm text-text-muted">Facilitated interactive workshop solving live enterprise prompt problems</span>
+      </div>
+    </div>
+    <div class="flex items-center gap-3 self-start sm:self-auto shrink-0">
+      <span class="font-label-badge text-label-badge text-secondary-fixed-dim bg-surface-container px-space-md py-space-xs rounded-full uppercase">Interactive Workshop</span>
+      <span class="agenda-chevron material-symbols-outlined text-[20px] text-text-muted group-hover:text-primary-container">expand_more</span>
+    </div>
+  </div>
+  <div class="agenda-drawer">
+    <div class="overflow-hidden">
+      <div class="pt-4 mt-4 border-t border-surface-border/60 grid grid-cols-1 lg:grid-cols-12 gap-4 text-xs font-body-sm">
+        <div class="lg:col-span-7 flex flex-col gap-2">
+          <span class="font-kicker text-kicker uppercase text-primary-container font-semibold tracking-wider">Hands-on Working Lab</span>
+          <p class="text-secondary leading-relaxed">
+            A facilitated, roll-up-your-sleeves practical sprint. Delegates bring a real operational bottleneck from their current organization and map it into an automated AI workflow, guided by expert mentors.
+          </p>
+          <ul class="flex flex-col gap-1 text-text-muted mt-1 font-label-code text-[11px]">
+            <li class="flex items-start gap-1.5"><span class="text-primary-container leading-none">›</span><span>Step-by-step enterprise friction audit workbook</span></li>
+            <li class="flex items-start gap-1.5"><span class="text-primary-container leading-none">›</span><span>Designing resilient prompt chains with human-in-the-loop validation</span></li>
+            <li class="flex items-start gap-1.5"><span class="text-primary-container leading-none">›</span><span>Real-time feedback and review by enterprise AI transformation coaches</span></li>
+          </ul>
+        </div>
+        <div class="lg:col-span-5 flex flex-col justify-between gap-3 bg-surface-container/60 p-3 rounded-lg border border-surface-border/40">
+          <div class="flex flex-col gap-2">
+            <div class="flex items-center justify-between text-text-muted font-label-code text-[11px]">
+              <span class="uppercase">Lab Facilitator</span>
+              <span class="text-primary-container font-bold">Practical Lab</span>
+            </div>
+            <div class="flex items-center gap-2.5">
+              <div class="w-8 h-8 rounded-full bg-surface-container-high border border-primary-container/30 flex items-center justify-center font-bold text-primary-container text-xs shrink-0">
+                AT
+              </div>
+              <div class="flex flex-col min-w-0">
+                <span class="font-headline-sm text-xs font-bold text-text-primary truncate">AI Transformation Director</span>
+                <span class="text-text-muted text-[11px] truncate">Advisory &amp; Transformational Operations</span>
+              </div>
+            </div>
+          </div>
+          <div class="pt-2 border-t border-surface-border/40 flex items-center justify-between font-label-code text-[11px]">
+            <div class="flex items-center gap-1.5 text-text-muted">
+              <span class="material-symbols-outlined text-[15px] text-primary-container">meeting_room</span>
+              <span>Interactive Lab Amphitheatre B</span>
+            </div>
+            <button type="button" class="agenda-session-cal-btn text-primary-container hover:underline inline-flex items-center gap-1 text-[11px] font-bold" data-session-title="Interactive Workshop: Your Business, SHIFTed" data-session-start="20261128T144500Z" data-session-end="20261128T153000Z" data-session-room="Interactive Lab Amphitheatre B" data-session-desc="Facilitated interactive workshop solving live enterprise prompt problems.">
+              <span class="material-symbols-outlined text-[14px]">calendar_add_on</span>
+              <span>Add to Cal</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- 16:30 Closing Talk & Moment -->
+<div class="agenda-item group relative bg-surface-card rounded-xl p-space-md sm:p-space-lg border border-surface-border/60 hover:border-primary-container/50 hover:bg-surface-card-hover transition-all duration-300 shadow-sm cursor-pointer select-none" data-agenda-type="talks" tabindex="0">
+  <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-space-md">
+    <div class="flex items-start sm:items-center gap-space-md flex-1">
+      <span class="font-label-code text-label-code text-primary-container w-28 shrink-0 group-hover:text-primary-fixed-dim transition-colors">16:30 – 17:15</span>
+      <div class="flex flex-col">
+        <span class="font-headline-sm text-headline-sm text-text-primary font-bold group-hover:text-white transition-colors">What Comes Next? &amp; Closing Moment</span>
+        <span class="font-body-sm text-body-sm text-text-muted">Executive summary roadmap and 2027 leadership handover</span>
+      </div>
+    </div>
+    <div class="flex items-center gap-3 self-start sm:self-auto shrink-0">
+      <span class="font-label-badge text-label-badge text-primary-container bg-surface-container px-space-md py-space-xs rounded-full uppercase">Closing &amp; Future Vision</span>
+      <span class="agenda-chevron material-symbols-outlined text-[20px] text-text-muted group-hover:text-primary-container">expand_more</span>
+    </div>
+  </div>
+  <div class="agenda-drawer">
+    <div class="overflow-hidden">
+      <div class="pt-4 mt-4 border-t border-surface-border/60 grid grid-cols-1 lg:grid-cols-12 gap-4 text-xs font-body-sm">
+        <div class="lg:col-span-7 flex flex-col gap-2">
+          <span class="font-kicker text-kicker uppercase text-primary-container font-semibold tracking-wider">Synthesis &amp; Next Horizons</span>
+          <p class="text-secondary leading-relaxed">
+            Synthesis of key takeaways across all tracks: frontier model capabilities, agentic automation, and concrete Monday-morning action items. Formal closing recognition of summit partners and official handover to the next executive mandate.
+          </p>
+          <ul class="flex flex-col gap-1 text-text-muted mt-1 font-label-code text-[11px]">
+            <li class="flex items-start gap-1.5"><span class="text-primary-container leading-none">›</span><span>Frontier intelligence horizons: multimodal reasoning and embodied AI</span></li>
+            <li class="flex items-start gap-1.5"><span class="text-primary-container leading-none">›</span><span>Publication release of the summit collective white paper</span></li>
+            <li class="flex items-start gap-1.5"><span class="text-primary-container leading-none">›</span><span>Closing ceremony and recognition of institutional delegators</span></li>
+          </ul>
+        </div>
+        <div class="lg:col-span-5 flex flex-col justify-between gap-3 bg-surface-container/60 p-3 rounded-lg border border-surface-border/40">
+          <div class="flex flex-col gap-2">
+            <div class="flex items-center justify-between text-text-muted font-label-code text-[11px]">
+              <span class="uppercase">Closing Perspective</span>
+              <span class="text-primary-container font-bold">Closing Vision</span>
+            </div>
+            <div class="flex items-center gap-2.5">
+              <div class="w-8 h-8 rounded-full bg-surface-container-high border border-primary-container/30 flex items-center justify-center font-bold text-primary-container text-xs shrink-0">
+                GS
+              </div>
+              <div class="flex flex-col min-w-0">
+                <span class="font-headline-sm text-xs font-bold text-text-primary truncate">Global Systems Strategist</span>
+                <span class="text-text-muted text-[11px] truncate">Serial Tech Entrepreneur &amp; AI Research Fellow</span>
+              </div>
+            </div>
+          </div>
+          <div class="pt-2 border-t border-surface-border/40 flex items-center justify-between font-label-code text-[11px]">
+            <div class="flex items-center gap-1.5 text-text-muted">
+              <span class="material-symbols-outlined text-[15px] text-primary-container">meeting_room</span>
+              <span>Grand Plenary Amphitheatre</span>
+            </div>
+            <button type="button" class="agenda-session-cal-btn text-primary-container hover:underline inline-flex items-center gap-1 text-[11px] font-bold" data-session-title="What Comes Next? & Closing Moment" data-session-start="20261128T153000Z" data-session-end="20261128T161500Z" data-session-room="Grand Plenary Amphitheatre" data-session-desc="Executive roadmap synthesis and 2027 leadership handover.">
+              <span class="material-symbols-outlined text-[14px]">calendar_add_on</span>
+              <span>Add to Cal</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+</div>
+
+<!-- Empty state container if no sessions match -->
+<div id="agenda-empty-state" class="hidden flex-col items-center justify-center p-12 bg-surface-card rounded-xl border border-surface-border text-center">
+  <span class="material-symbols-outlined text-text-muted text-[40px] mb-2">event_busy</span>
+  <h4 class="font-headline-sm text-text-primary font-bold">No sessions found</h4>
+  <p class="font-body-sm text-text-muted max-w-sm mt-1">There are no agenda sessions currently scheduled under this filter category.</p>
+  <button type="button" id="agenda-reset-filter-btn" class="mt-4 px-4 py-2 rounded-full bg-primary-container text-on-primary font-label-code text-xs uppercase font-bold hover:shadow-[0_0_12px_rgba(205,241,72,0.3)] transition-all">
+    Show All Sessions
+  </button>
+</div>
+
+</div>
+</section>
+<!-- SECTION: SPEAKERS -->
+<section class="w-full bg-surface-container-low py-space-3xl" id="speakers">
+<div class="max-w-[1200px] mx-auto px-gutter-mobile lg:px-gutter flex flex-col gap-space-2xl">
+<div class="flex flex-col gap-space-xs">
+<span class="font-kicker text-kicker uppercase tracking-widest text-primary-container">Faculty &amp; Speakers</span>
+<h2 class="font-headline-xl text-headline-xl text-text-primary tracking-tight font-extrabold">
+          The people doing it, not just discussing it.
+        </h2>
+<p class="font-body-sm text-body-sm text-text-muted">Line-up in progress — announcements are rolling out continuously leading up to summit day.</p>
+</div>
+<!-- 6-Card Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-space-lg" id="speakers-grid">
+<!-- Speaker 1 -->
+<div class="speaker-card bg-surface-card rounded-xl p-space-lg flex flex-col justify-between h-full shadow-sm hover:bg-surface-card-hover hover:border-primary-container/40 border border-transparent transition-all group cursor-pointer" data-speaker-index="0">
+<div>
+<div class="w-full h-48 rounded-lg bg-surface-container-high flex flex-col items-center justify-center relative overflow-hidden mb-space-md">
+<span class="material-symbols-outlined text-[48px] text-on-surface-variant group-hover:scale-110 transition-transform">person_outline</span>
+<span class="font-label-code text-label-code text-text-muted mt-space-xs">Click to view session abstract</span>
+</div>
+<span class="font-label-badge text-label-badge text-primary-container uppercase tracking-wider">Keynote Address</span>
+<h3 class="font-headline-sm text-headline-sm text-text-primary font-bold mt-space-xs group-hover:text-primary-container transition-colors">Executive Keynote Speaker</h3>
+<p class="font-body-sm text-body-sm text-secondary">Founder &amp; CEO</p>
+<p class="font-body-sm text-body-sm text-text-muted">Leading Enterprise Scaleup</p>
+</div>
+<div class="mt-space-lg pt-space-sm flex items-center justify-between text-text-muted">
+<span class="font-label-code text-label-code text-primary-container">Session: AI Is Changing Business</span>
+<span class="material-symbols-outlined text-[18px] text-primary-container">arrow_forward</span>
+</div>
+</div>
+<!-- Speaker 2 -->
+<div class="speaker-card bg-surface-card rounded-xl p-space-lg flex flex-col justify-between h-full shadow-sm hover:bg-surface-card-hover hover:border-primary-container/40 border border-transparent transition-all group cursor-pointer" data-speaker-index="1">
+<div>
+<div class="w-full h-48 rounded-lg bg-surface-container-high flex flex-col items-center justify-center relative overflow-hidden mb-space-md">
+<span class="material-symbols-outlined text-[48px] text-on-surface-variant group-hover:scale-110 transition-transform">person_outline</span>
+<span class="font-label-code text-label-code text-text-muted mt-space-xs">Click to view session abstract</span>
+</div>
+<span class="font-label-badge text-label-badge text-primary-container uppercase tracking-wider">Case Studies</span>
+<h3 class="font-headline-sm text-headline-sm text-text-primary font-bold mt-space-xs group-hover:text-primary-container transition-colors">Enterprise Growth Architect</h3>
+<p class="font-body-sm text-body-sm text-secondary">Head of Growth</p>
+<p class="font-body-sm text-body-sm text-text-muted">Fintech &amp; Automation Platform</p>
+</div>
+<div class="mt-space-lg pt-space-sm flex items-center justify-between text-text-muted">
+<span class="font-label-code text-label-code text-primary-container">Session: AI in the Real World</span>
+<span class="material-symbols-outlined text-[18px] text-primary-container">arrow_forward</span>
+</div>
+</div>
+<!-- Speaker 3 -->
+<div class="speaker-card bg-surface-card rounded-xl p-space-lg flex flex-col justify-between h-full shadow-sm hover:bg-surface-card-hover hover:border-primary-container/40 border border-transparent transition-all group cursor-pointer" data-speaker-index="2">
+<div>
+<div class="w-full h-48 rounded-lg bg-surface-container-high flex flex-col items-center justify-center relative overflow-hidden mb-space-md">
+<span class="material-symbols-outlined text-[48px] text-on-surface-variant group-hover:scale-110 transition-transform">person_outline</span>
+<span class="font-label-code text-label-code text-text-muted mt-space-xs">Click to view session abstract</span>
+</div>
+<span class="font-label-badge text-label-badge text-primary-container uppercase tracking-wider">Product Systems</span>
+<h3 class="font-headline-sm text-headline-sm text-text-primary font-bold mt-space-xs group-hover:text-primary-container transition-colors">Lead Product Architect</h3>
+<p class="font-body-sm text-body-sm text-secondary">Product Lead</p>
+<p class="font-body-sm text-body-sm text-text-muted">Deep Learning Infrastructure</p>
+</div>
+<div class="mt-space-lg pt-space-sm flex items-center justify-between text-text-muted">
+<span class="font-label-code text-label-code text-primary-container">Session: Building with AI</span>
+<span class="material-symbols-outlined text-[18px] text-primary-container">arrow_forward</span>
+</div>
+</div>
+<!-- Speaker 4 -->
+<div class="speaker-card bg-surface-card rounded-xl p-space-lg flex flex-col justify-between h-full shadow-sm hover:bg-surface-card-hover hover:border-primary-container/40 border border-transparent transition-all group cursor-pointer" data-speaker-index="3">
+<div>
+<div class="w-full h-48 rounded-lg bg-surface-container-high flex flex-col items-center justify-center relative overflow-hidden mb-space-md">
+<span class="material-symbols-outlined text-[48px] text-on-surface-variant group-hover:scale-110 transition-transform">person_outline</span>
+<span class="font-label-code text-label-code text-text-muted mt-space-xs">Click to view session abstract</span>
+</div>
+<span class="font-label-badge text-label-badge text-primary-container uppercase tracking-wider">Grand Panelist</span>
+<h3 class="font-headline-sm text-headline-sm text-text-primary font-bold mt-space-xs group-hover:text-primary-container transition-colors">Venture Capital Partner</h3>
+<p class="font-body-sm text-body-sm text-secondary">Managing Partner</p>
+<p class="font-body-sm text-body-sm text-text-muted">Pan-African Venture Capital</p>
+</div>
+<div class="mt-space-lg pt-space-sm flex items-center justify-between text-text-muted">
+<span class="font-label-code text-label-code text-primary-container">Session: The Big Conversation</span>
+<span class="material-symbols-outlined text-[18px] text-primary-container">arrow_forward</span>
+</div>
+</div>
+<!-- Speaker 5 -->
+<div class="speaker-card bg-surface-card rounded-xl p-space-lg flex flex-col justify-between h-full shadow-sm hover:bg-surface-card-hover hover:border-primary-container/40 border border-transparent transition-all group cursor-pointer" data-speaker-index="4">
+<div>
+<div class="w-full h-48 rounded-lg bg-surface-container-high flex flex-col items-center justify-center relative overflow-hidden mb-space-md">
+<span class="material-symbols-outlined text-[48px] text-on-surface-variant group-hover:scale-110 transition-transform">person_outline</span>
+<span class="font-label-code text-label-code text-text-muted mt-space-xs">Click to view session abstract</span>
+</div>
+<span class="font-label-badge text-label-badge text-primary-container uppercase tracking-wider">Practical Lab</span>
+<h3 class="font-headline-sm text-headline-sm text-text-primary font-bold mt-space-xs group-hover:text-primary-container transition-colors">AI Transformation Director</h3>
+<p class="font-body-sm text-body-sm text-secondary">AI Strategy Consultant</p>
+<p class="font-body-sm text-body-sm text-text-muted">Advisory &amp; Transformational Operations</p>
+</div>
+<div class="mt-space-lg pt-space-sm flex items-center justify-between text-text-muted">
+<span class="font-label-code text-label-code text-primary-container">Session: Your Business, SHIFTed</span>
+<span class="material-symbols-outlined text-[18px] text-primary-container">arrow_forward</span>
+</div>
+</div>
+<!-- Speaker 6 -->
+<div class="speaker-card bg-surface-card rounded-xl p-space-lg flex flex-col justify-between h-full shadow-sm hover:bg-surface-card-hover hover:border-primary-container/40 border border-transparent transition-all group cursor-pointer" data-speaker-index="5">
+<div>
+<div class="w-full h-48 rounded-lg bg-surface-container-high flex flex-col items-center justify-center relative overflow-hidden mb-space-md">
+<span class="material-symbols-outlined text-[48px] text-on-surface-variant group-hover:scale-110 transition-transform">person_outline</span>
+<span class="font-label-code text-label-code text-text-muted mt-space-xs">Click to view session abstract</span>
+</div>
+<span class="font-label-badge text-label-badge text-primary-container uppercase tracking-wider">Closing Perspective</span>
+<h3 class="font-headline-sm text-headline-sm text-text-primary font-bold mt-space-xs group-hover:text-primary-container transition-colors">Global Systems Strategist</h3>
+<p class="font-body-sm text-body-sm text-secondary">Serial Tech Entrepreneur</p>
+<p class="font-body-sm text-body-sm text-text-muted">Global Systems Architect</p>
+</div>
+<div class="mt-space-lg pt-space-sm flex items-center justify-between text-text-muted">
+<span class="font-label-code text-label-code text-primary-container">Session: What Comes Next?</span>
+<span class="material-symbols-outlined text-[18px] text-primary-container">arrow_forward</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTION: PARTNERSHIP & VALUE PROPOSITION -->
+<section class="w-full bg-surface-container-lowest py-space-3xl" id="partners">
+<div class="max-w-[1200px] mx-auto px-gutter-mobile lg:px-gutter flex flex-col gap-space-2xl">
+<div class="bg-surface-card rounded-xl p-space-lg sm:p-space-2xl relative overflow-hidden shadow-xl">
+<!-- Glow accents -->
+<div class="absolute -bottom-20 -right-20 w-80 h-80 rounded-full bg-primary-container/10 blur-3xl pointer-events-none"></div>
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-xl items-center relative z-10">
+<div class="lg:col-span-6 flex flex-col gap-space-md">
+<span class="font-kicker text-kicker uppercase tracking-widest text-primary-container">For Partners &amp; Sponsors</span>
+<h2 class="font-headline-xl text-headline-xl text-text-primary font-extrabold tracking-tight">
+              Why partner with SHIFT?
+            </h2>
+<p class="font-body-md text-body-md text-secondary leading-relaxed">
+              Be in the room where the next generation decides how business gets built with AI. Align your brand with progressive leadership, recruit premier talent from top universities, and present your tools on the main stage.
+            </p>
+<div class="pt-space-sm">
+<a class="inline-flex items-center justify-center px-space-xl py-space-md rounded-full bg-primary-container text-on-primary font-headline-sm text-body-md font-bold shadow-[0_0_20px_rgba(205,241,72,0.3)] hover:shadow-[0_0_28px_rgba(205,241,72,0.5)] transition-all" href="#become-a-partner">
+                Become a Partner
+              </a>
+</div>
+</div>
+<div class="lg:col-span-6 flex flex-col gap-space-md">
+<div class="bg-surface-container-low rounded-xl p-space-lg flex items-start gap-space-md">
+<div class="w-10 h-10 rounded-full bg-primary-container/15 flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-primary-container text-[20px]">groups</span>
+</div>
+<div class="flex flex-col">
+<span class="font-headline-sm text-headline-sm text-text-primary font-bold">Unfiltered Talent Access</span>
+<p class="font-body-sm text-body-sm text-text-muted mt-space-xs">Direct access to 150+ ambitious students and young professionals hailing from 10+ premier engineering and business universities across Tunisia.</p>
+</div>
+</div>
+<div class="bg-surface-container-low rounded-xl p-space-lg flex items-start gap-space-md">
+<div class="w-10 h-10 rounded-full bg-primary-container/15 flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-primary-container text-[20px]">hub</span>
+</div>
+<div class="flex flex-col">
+<span class="font-headline-sm text-headline-sm text-text-primary font-bold">Executive Brand Positioning</span>
+<p class="font-body-sm text-body-sm text-text-muted mt-space-xs">Position your enterprise brand precisely at the intersection of business, capital allocation, and applied machine intelligence.</p>
+</div>
+</div>
+<div class="bg-surface-container-low rounded-xl p-space-lg flex items-start gap-space-md">
+<div class="w-10 h-10 rounded-full bg-primary-container/15 flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-primary-container text-[20px]">campaign</span>
+</div>
+<div class="flex flex-col">
+<span class="font-headline-sm text-headline-sm text-text-primary font-bold">Dedicated Partner Spotlight</span>
+<p class="font-body-sm text-body-sm text-text-muted mt-space-xs">A dedicated plenary spotlight slot and exhibition booth in front of the full auditorium without concurrent competing tracks.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Partner Logo Strip -->
+<div class="flex flex-col items-center gap-space-md pt-space-lg">
+<span class="font-kicker text-kicker uppercase tracking-widest text-text-muted" id="partners-strip-label">Trusted By · Corporate Partners To Be Announced</span>
+<div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-space-md w-full" id="partners-grid">
+<div class="h-16 rounded-lg bg-surface-card flex items-center justify-center text-text-muted font-label-code text-label-code uppercase tracking-wider hover:text-text-primary transition-colors">
+            Partner 01
+          </div>
+<div class="h-16 rounded-lg bg-surface-card flex items-center justify-center text-text-muted font-label-code text-label-code uppercase tracking-wider hover:text-text-primary transition-colors">
+            Partner 02
+          </div>
+<div class="h-16 rounded-lg bg-surface-card flex items-center justify-center text-text-muted font-label-code text-label-code uppercase tracking-wider hover:text-text-primary transition-colors">
+            Partner 03
+          </div>
+<div class="h-16 rounded-lg bg-surface-card flex items-center justify-center text-text-muted font-label-code text-label-code uppercase tracking-wider hover:text-text-primary transition-colors">
+            Partner 04
+          </div>
+<div class="h-16 rounded-lg bg-surface-card flex items-center justify-center text-text-muted font-label-code text-label-code uppercase tracking-wider hover:text-text-primary transition-colors">
+            Partner 05
+          </div>
+<div class="h-16 rounded-lg bg-surface-card flex items-center justify-center text-text-muted font-label-code text-label-code uppercase tracking-wider hover:text-text-primary transition-colors">
+            Partner 06
+          </div>
+</div>
+</div>
+<!-- Become a Partner — application card -->
+<div class="bg-surface-card rounded-xl p-space-lg sm:p-space-2xl relative overflow-hidden shadow-xl scroll-mt-24" id="become-a-partner">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-xl items-center relative z-10">
+<div class="lg:col-span-8 flex flex-col gap-space-sm">
+<span class="font-kicker text-kicker uppercase tracking-widest text-primary-container">Apply</span>
+<h3 class="font-headline-lg text-headline-lg text-text-primary font-extrabold tracking-tight">Become a Partner</h3>
+<p class="font-body-sm text-body-sm text-text-muted">Tell us a bit about your company. Our partnerships lead will get back to you shortly with our official sponsorship prospectus.</p>
+</div>
+<div class="lg:col-span-4 flex items-center lg:justify-end">
+<button class="w-full sm:w-auto px-space-xl py-space-md rounded-full bg-primary-container text-on-primary font-headline-sm text-body-md font-bold hover:shadow-[0_0_24px_rgba(205,241,72,0.4)] transition-all flex items-center justify-center gap-space-sm" id="partner-cta" type="button">
+<span>Apply to Partner</span>
+<span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTION: ORGANIZING TEAM -->
+<section class="w-full bg-surface-container-low py-space-3xl" id="team">
+<div class="max-w-[1200px] mx-auto px-gutter-mobile lg:px-gutter flex flex-col gap-space-2xl">
+<div class="flex flex-col items-center text-center gap-space-xs">
+<span class="font-kicker text-kicker uppercase tracking-widest text-primary-container">Behind The Shift</span>
+<h2 class="font-headline-xl text-headline-xl text-text-primary tracking-tight font-extrabold">
+          Organizing team
+        </h2>
+<p class="font-body-sm text-body-sm text-text-muted max-w-xl">
+          AIESEC in Bardo members orchestrating this event. Profiles and portraits will be updated progressively.
+        </p>
+</div>
+<!-- 6 Committee Cards -->
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-space-lg" id="team-grid">
+<!-- Lead 1 -->
+<div class="bg-surface-card rounded-xl p-space-lg flex flex-col justify-between hover:bg-surface-card-hover transition-colors">
+<div class="w-full h-56 rounded-lg bg-surface-container-high flex flex-col items-center justify-center mb-space-md">
+<span class="font-headline-sm text-headline-sm text-primary-container font-bold">Lead 1</span>
+<span class="font-label-code text-label-code text-text-muted mt-space-xs">Photo Placeholder</span>
+</div>
+<div class="flex items-center justify-between">
+<div>
+<h4 class="font-headline-sm text-headline-sm text-text-primary font-bold">Name TBA</h4>
+<p class="font-body-sm text-body-sm text-secondary">OC President</p>
+</div>
+<a class="w-9 h-9 rounded-full bg-surface-container flex items-center justify-center hover:bg-primary-container hover:text-on-primary transition-colors" href="https://linkedin.com" rel="noreferrer" target="_blank">
+<span class="material-symbols-outlined text-[18px]">share</span>
+</a>
+</div>
+</div>
+<!-- Lead 2 -->
+<div class="bg-surface-card rounded-xl p-space-lg flex flex-col justify-between hover:bg-surface-card-hover transition-colors">
+<div class="w-full h-56 rounded-lg bg-surface-container-high flex flex-col items-center justify-center mb-space-md">
+<span class="font-headline-sm text-headline-sm text-primary-container font-bold">Lead 2</span>
+<span class="font-label-code text-label-code text-text-muted mt-space-xs">Photo Placeholder</span>
+</div>
+<div class="flex items-center justify-between">
+<div>
+<h4 class="font-headline-sm text-headline-sm text-text-primary font-bold">Name TBA</h4>
+<p class="font-body-sm text-body-sm text-secondary">Partnerships Lead</p>
+</div>
+<a class="w-9 h-9 rounded-full bg-surface-container flex items-center justify-center hover:bg-primary-container hover:text-on-primary transition-colors" href="https://linkedin.com" rel="noreferrer" target="_blank">
+<span class="material-symbols-outlined text-[18px]">share</span>
+</a>
+</div>
+</div>
+<!-- Lead 3 -->
+<div class="bg-surface-card rounded-xl p-space-lg flex flex-col justify-between hover:bg-surface-card-hover transition-colors">
+<div class="w-full h-56 rounded-lg bg-surface-container-high flex flex-col items-center justify-center mb-space-md">
+<span class="font-headline-sm text-headline-sm text-primary-container font-bold">Lead 3</span>
+<span class="font-label-code text-label-code text-text-muted mt-space-xs">Photo Placeholder</span>
+</div>
+<div class="flex items-center justify-between">
+<div>
+<h4 class="font-headline-sm text-headline-sm text-text-primary font-bold">Name TBA</h4>
+<p class="font-body-sm text-body-sm text-secondary">Marketing Lead</p>
+</div>
+<a class="w-9 h-9 rounded-full bg-surface-container flex items-center justify-center hover:bg-primary-container hover:text-on-primary transition-colors" href="https://linkedin.com" rel="noreferrer" target="_blank">
+<span class="material-symbols-outlined text-[18px]">share</span>
+</a>
+</div>
+</div>
+<!-- Lead 4 -->
+<div class="bg-surface-card rounded-xl p-space-lg flex flex-col justify-between hover:bg-surface-card-hover transition-colors">
+<div class="w-full h-56 rounded-lg bg-surface-container-high flex flex-col items-center justify-center mb-space-md">
+<span class="font-headline-sm text-headline-sm text-primary-container font-bold">Lead 4</span>
+<span class="font-label-code text-label-code text-text-muted mt-space-xs">Photo Placeholder</span>
+</div>
+<div class="flex items-center justify-between">
+<div>
+<h4 class="font-headline-sm text-headline-sm text-text-primary font-bold">Name TBA</h4>
+<p class="font-body-sm text-body-sm text-secondary">Logistics Lead</p>
+</div>
+<a class="w-9 h-9 rounded-full bg-surface-container flex items-center justify-center hover:bg-primary-container hover:text-on-primary transition-colors" href="https://linkedin.com" rel="noreferrer" target="_blank">
+<span class="material-symbols-outlined text-[18px]">share</span>
+</a>
+</div>
+</div>
+<!-- Lead 5 -->
+<div class="bg-surface-card rounded-xl p-space-lg flex flex-col justify-between hover:bg-surface-card-hover transition-colors">
+<div class="w-full h-56 rounded-lg bg-surface-container-high flex flex-col items-center justify-center mb-space-md">
+<span class="font-headline-sm text-headline-sm text-primary-container font-bold">Lead 5</span>
+<span class="font-label-code text-label-code text-text-muted mt-space-xs">Photo Placeholder</span>
+</div>
+<div class="flex items-center justify-between">
+<div>
+<h4 class="font-headline-sm text-headline-sm text-text-primary font-bold">Name TBA</h4>
+<p class="font-body-sm text-body-sm text-secondary">Content Lead</p>
+</div>
+<a class="w-9 h-9 rounded-full bg-surface-container flex items-center justify-center hover:bg-primary-container hover:text-on-primary transition-colors" href="https://linkedin.com" rel="noreferrer" target="_blank">
+<span class="material-symbols-outlined text-[18px]">share</span>
+</a>
+</div>
+</div>
+<!-- Lead 6 -->
+<div class="bg-surface-card rounded-xl p-space-lg flex flex-col justify-between hover:bg-surface-card-hover transition-colors">
+<div class="w-full h-56 rounded-lg bg-surface-container-high flex flex-col items-center justify-center mb-space-md">
+<span class="font-headline-sm text-headline-sm text-primary-container font-bold">Lead 6</span>
+<span class="font-label-code text-label-code text-text-muted mt-space-xs">Photo Placeholder</span>
+</div>
+<div class="flex items-center justify-between">
+<div>
+<h4 class="font-headline-sm text-headline-sm text-text-primary font-bold">Name TBA</h4>
+<p class="font-body-sm text-body-sm text-secondary">Experience Lead</p>
+</div>
+<a class="w-9 h-9 rounded-full bg-surface-container flex items-center justify-center hover:bg-primary-container hover:text-on-primary transition-colors" href="https://linkedin.com" rel="noreferrer" target="_blank">
+<span class="material-symbols-outlined text-[18px]">share</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTION: EXECUTIVE FAQ ACCORDION -->
+<section class="w-full bg-surface-container-lowest py-space-3xl" id="faq">
+<div class="max-w-[1200px] mx-auto px-gutter-mobile lg:px-gutter flex flex-col gap-space-2xl">
+<div class="flex flex-col gap-space-xs">
+<span class="font-kicker text-kicker uppercase tracking-widest text-primary-container">Frequently Asked Questions</span>
+<h2 class="font-headline-xl text-headline-xl text-text-primary tracking-tight font-extrabold">
+          Straight answers.
+        </h2>
+</div>
+<!-- FAQ Stack -->
+<div class="flex flex-col gap-space-sm max-w-4xl" id="faq-accordion">
+<!-- FAQ 1 -->
+<div class="bg-surface-card rounded-xl p-space-lg shadow-sm transition-all">
+<button class="w-full flex items-center justify-between text-left focus:outline-none" onclick="toggleFaq(this)">
+<span class="font-headline-sm text-headline-sm text-text-primary font-bold">Is this a hackathon?</span>
+<span class="material-symbols-outlined text-primary-container transition-transform duration-200">expand_more</span>
+</button>
+<div class="mt-space-sm hidden text-secondary font-body-md text-body-md leading-relaxed">
+            No. SHIFT is an executive leadership and business conference. There is no overnight coding, algorithmic judging, or technical product sprinting. Instead, it is an executive summit focused on strategic leadership, ROI-driven business case studies, practical enterprise tool adoption, and bilateral talent connections.
+          </div>
+</div>
+<!-- FAQ 2 -->
+<div class="bg-surface-card rounded-xl p-space-lg shadow-sm transition-all">
+<button class="w-full flex items-center justify-between text-left focus:outline-none" onclick="toggleFaq(this)">
+<span class="font-headline-sm text-headline-sm text-text-primary font-bold">Who should attend?</span>
+<span class="material-symbols-outlined text-primary-container transition-transform duration-200">expand_more</span>
+</button>
+<div class="mt-space-sm hidden text-secondary font-body-md text-body-md leading-relaxed">
+            SHIFT is curated specifically for business founders, C-suite executives, senior product leaders, university students in management and computer science, and young professionals aiming to navigate the business frontier of AI rather than just model training.
+          </div>
+</div>
+<!-- FAQ 3 -->
+<div class="bg-surface-card rounded-xl p-space-lg shadow-sm transition-all">
+<button class="w-full flex items-center justify-between text-left focus:outline-none" onclick="toggleFaq(this)">
+<span class="font-headline-sm text-headline-sm text-text-primary font-bold">Where and when is it?</span>
+<span class="material-symbols-outlined text-primary-container transition-transform duration-200">expand_more</span>
+</button>
+<div class="mt-space-sm hidden text-secondary font-body-md text-body-md leading-relaxed">
+            The event takes place on Saturday, 28 November 2026 in Tunis, Tunisia. The verified executive venue (between Cité de la Culture and UTICA headquarters) will be finalized and communicated to registered ticket holders 30 days in advance.
+          </div>
+</div>
+<!-- FAQ 4 -->
+<div class="bg-surface-card rounded-xl p-space-lg shadow-sm transition-all">
+<button class="w-full flex items-center justify-between text-left focus:outline-none" onclick="toggleFaq(this)">
+<span class="font-headline-sm text-headline-sm text-text-primary font-bold">Is it free?</span>
+<span class="material-symbols-outlined text-primary-container transition-transform duration-200">expand_more</span>
+</button>
+<div class="mt-space-sm hidden text-secondary font-body-md text-body-md leading-relaxed">
+            A limited cohort of academic passes is subsidized by our corporate partners for top-performing university candidates selected via AIESEC screening. General executive delegate tickets and partner exhibition credentials involve an access fee that covers summit catering, executive lounge materials, and session recordings.
+          </div>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTION: REGISTRATION / PARTICIPANT CALLOUT -->
+<section class="w-full bg-surface-container-low py-space-3xl" id="register">
+<div class="max-w-[1200px] mx-auto px-gutter-mobile lg:px-gutter">
+<div class="bg-surface-card rounded-xl p-space-xl sm:p-space-2xl flex flex-col lg:flex-row items-center justify-between gap-space-xl relative overflow-hidden">
+<div class="flex flex-col gap-space-sm max-w-xl">
+<span class="font-kicker text-kicker uppercase tracking-widest text-primary-container">Secure Attendance</span>
+<h2 class="font-headline-xl text-headline-xl text-text-primary font-extrabold tracking-tight">
+            Reserve your seat in the room.
+          </h2>
+<p class="font-body-md text-body-md text-secondary">
+            Capacity is strictly limited to 150 participants to guarantee unhindered networking and high-value conversation quality.
+          </p>
+</div>
+<div class="w-full lg:w-auto flex flex-col items-center sm:items-start">
+<button class="w-full sm:w-auto px-space-xl py-space-md rounded-full bg-primary-container text-on-primary font-headline-sm text-body-md font-bold hover:shadow-[0_0_24px_rgba(205,241,72,0.4)] transition-all flex items-center justify-center gap-space-sm" id="register-cta" type="button">
+<span>Register Now</span>
+<span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</button>
+</div>
+</div>
+</div>
+</section>
+<!-- Accordion Script & Countdown Logic -->
+<script>
+    function toggleFaq(button) {
+      const panel = button.nextElementSibling;
+      const icon = button.querySelector('.material-symbols-outlined');
+      const isHidden = panel.classList.contains('hidden');
+
+      // Close other panels inside container
+      const container = document.getElementById('faq-accordion');
+      if (container) {
+        container.querySelectorAll('.mt-space-sm').forEach(el => el.classList.add('hidden'));
+        container.querySelectorAll('.material-symbols-outlined').forEach(i => i.classList.remove('rotate-180'));
+      }
+
+      if (isHidden) {
+        panel.classList.remove('hidden');
+        if (icon) icon.classList.add('rotate-180');
+      } else {
+        panel.classList.add('hidden');
+        if (icon) icon.classList.remove('rotate-180');
+      }
+    }
+
+    // Dynamic Live countdown ticker
+    document.addEventListener('DOMContentLoaded', () => {
+      const targetDate = new Date('November 28, 2026 09:00:00 GMT+0100').getTime();
+
+      function updateCountdown() {
+        const now = new Date().getTime();
+        const difference = targetDate - now;
+
+        if (difference > 0) {
+          const days = Math.floor(difference / (1000 * 60 * 60 * 24));
+          const hours = Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+          const minutes = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
+          const seconds = Math.floor((difference % (1000 * 60)) / 1000);
+
+          const daysEl = document.getElementById('countdown-days');
+          const hoursEl = document.getElementById('countdown-hours');
+          const minutesEl = document.getElementById('countdown-minutes');
+          const secondsEl = document.getElementById('countdown-seconds');
+
+          if (daysEl) daysEl.innerText = days < 10 ? '0' + days : days;
+          if (hoursEl) hoursEl.innerText = hours < 10 ? '0' + hours : hours;
+          if (minutesEl) minutesEl.innerText = minutes < 10 ? '0' + minutes : minutes;
+          if (secondsEl) secondsEl.innerText = seconds < 10 ? '0' + seconds : seconds;
+        }
+      }
+
+      updateCountdown();
+      setInterval(updateCountdown, 1000);
+    });
+  </script>
+</div></main><footer class="w-full bg-surface-card"><div class="max-w-[1200px] mx-auto px-gutter-mobile lg:px-gutter py-space-3xl"><div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-space-xl"><div class="lg:col-span-2 flex flex-col gap-space-md"><div class="flex flex-col"><span class="font-headline-sm text-headline-sm text-text-primary tracking-tight font-extrabold">SHIFT<span class="text-primary-container">.</span></span><span class="font-kicker text-kicker text-text-muted uppercase tracking-widest">Where Business Meets AI</span></div><p class="font-body-sm text-body-sm text-text-muted max-w-sm">Organized by AIESEC in Bardo. Bringing together visionaries, executive leaders, and machine intelligence innovators to shape enterprise deployment.</p><div class="flex items-center gap-space-sm pt-space-xs"><span class="font-label-badge text-label-badge text-primary-container bg-glow-lime px-space-sm py-space-xs rounded-full uppercase">Edition 2025</span><span class="font-label-badge text-label-badge text-on-surface-variant bg-surface-container-low px-space-sm py-space-xs rounded-full uppercase">Executive Summit</span></div></div><div class="flex flex-col gap-space-sm"><span class="font-kicker text-kicker text-text-primary uppercase tracking-widest">Navigation</span><nav class="flex flex-col gap-space-xs"><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors" data-path="about" href="#about">About</a><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors" data-path="agenda" href="#agenda">Agenda</a><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors" data-path="speakers" href="#speakers">Speakers</a><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors" data-path="partners" href="#partners">Partners</a><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors" data-path="team" href="#team">Team</a><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors" data-path="faq" href="#faq">FAQ</a></nav></div><div class="flex flex-col gap-space-sm"><span class="font-kicker text-kicker text-text-primary uppercase tracking-widest">Get Involved</span><nav class="flex flex-col gap-space-xs"><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors" data-path="register" href="#register">Attendee Registration</a><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors" data-path="become-a-partner" href="#become-a-partner">Sponsorship Packages</a><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors" data-path="press" href="#">Press &amp; Media Kit</a><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors" data-path="contact" href="#">Contact Organizing Team</a></nav></div><div class="flex flex-col gap-space-sm"><span class="font-kicker text-kicker text-text-primary uppercase tracking-widest">Organizer Details</span><p class="font-body-sm text-body-sm text-on-surface-variant">AIESEC in Bardo Headquarters<br/>Tunis, Tunisia<br/>contact@shiftconference.ai</p><div class="flex items-center gap-space-sm pt-space-xs"><div class="w-8 h-8 rounded-full bg-surface-container flex items-center justify-center"><span class="material-symbols-outlined text-text-muted text-[16px]">mail</span></div><div class="w-8 h-8 rounded-full bg-surface-container flex items-center justify-center"><span class="material-symbols-outlined text-text-muted text-[16px]">location_on</span></div><div class="w-8 h-8 rounded-full bg-surface-container flex items-center justify-center"><span class="material-symbols-outlined text-text-muted text-[16px]">public</span></div></div></div></div><div class="mt-space-2xl pt-space-lg flex flex-col sm:flex-row items-center justify-between gap-space-sm text-center sm:text-left"><span class="font-label-code text-label-code text-text-muted">© 2025 SHIFT Conference. Powered by AIESEC in Bardo. All rights reserved.</span><div class="flex items-center gap-space-md"><a class="font-label-code text-label-code text-text-muted hover:text-on-surface transition-colors" data-path="privacy" href="#">Privacy Policy</a><a class="font-label-code text-label-code text-text-muted hover:text-on-surface transition-colors" data-path="terms" href="#">Terms of Service</a></div></div></div></footer>
+<!-- MODALS CONTAINER -->
+<!-- 1. MODAL: PARTNER CONFIRMATION ("Are you actually a partner?") -->
+<div class="fixed inset-0 z-[100] hidden items-center justify-center p-4 sm:p-6 bg-black/80 backdrop-blur-md transition-all" id="modal-partner-confirm" role="dialog" aria-modal="true" aria-labelledby="partner-confirm-title">
+  <div class="bg-surface-card border border-surface-border rounded-2xl max-w-lg w-full p-6 sm:p-8 shadow-2xl relative flex flex-col gap-space-md">
+    <button aria-label="Close modal" class="modal-close-btn absolute top-5 right-5 text-text-muted hover:text-text-primary transition-colors w-8 h-8 rounded-full bg-surface-container flex items-center justify-center" type="button">
+      <span class="material-symbols-outlined text-[20px]">close</span>
+    </button>
+    <div class="w-12 h-12 rounded-xl bg-primary-container/10 border border-primary-container/20 flex items-center justify-center text-primary-container">
+      <span class="material-symbols-outlined text-[28px]">handshake</span>
+    </div>
+    <div class="flex flex-col gap-space-xs">
+      <span class="font-label-badge text-label-badge uppercase tracking-wider text-primary-container">Partnership Verification</span>
+      <h3 class="font-headline-lg text-headline-lg text-text-primary font-extrabold tracking-tight" id="partner-confirm-title">Are you actually a partner?</h3>
+      <p class="font-body-sm text-body-sm text-secondary leading-relaxed mt-space-xs">
+        This application form is strictly intended for corporate sponsors, companies, and organizations looking to partner with or sponsor SHIFT 2026.
+      </p>
+    </div>
+    <div class="bg-surface-container-low border border-surface-border rounded-xl p-space-md flex items-start gap-space-sm">
+      <span class="material-symbols-outlined text-primary-container text-[20px] shrink-0 mt-0.5">help_outline</span>
+      <div class="flex flex-col">
+        <span class="font-label-code text-label-code text-text-primary font-bold">Mistook this for summit registration?</span>
+        <span class="font-body-sm text-body-sm text-text-muted">If you are a student, executive, or professional seeking to attend SHIFT as a participant, please use the attendee registration instead!</span>
+      </div>
+    </div>
+    <div class="flex flex-col gap-space-sm pt-space-xs">
+      <button class="w-full px-space-md py-space-md rounded-full bg-primary-container text-on-primary font-headline-sm text-body-md font-bold shadow-[0_0_20px_rgba(205,241,72,0.3)] hover:shadow-[0_0_28px_rgba(205,241,72,0.5)] transition-all flex items-center justify-center gap-space-sm" id="partner-redirect-to-reg-btn" type="button">
+        <span>No, I want to attend — Register for Event</span>
+        <span class="material-symbols-outlined text-[20px]">arrow_forward</span>
+      </button>
+      <button class="w-full px-space-md py-space-sm rounded-full bg-surface-container text-on-surface font-label-code text-label-code uppercase tracking-wider hover:bg-surface-card-hover hover:text-text-primary border border-surface-border transition-all flex items-center justify-center gap-space-sm" id="partner-proceed-btn" type="button">
+        <span class="material-symbols-outlined text-[18px]">corporate_fare</span>
+        <span>Yes, continue as a Partner / Sponsor</span>
+      </button>
+    </div>
+  </div>
+</div>
+
+<!-- 2. MODAL: ATTENDEE REGISTRATION FORM -->
+<div class="fixed inset-0 z-[100] hidden items-center justify-center p-4 sm:p-6 bg-black/80 backdrop-blur-md transition-all" id="modal-registration" role="dialog" aria-modal="true" aria-labelledby="reg-modal-title">
+  <div class="bg-surface-card border border-surface-border rounded-2xl max-w-lg w-full p-6 sm:p-8 max-h-[90vh] overflow-y-auto shadow-2xl relative flex flex-col gap-space-md">
+    <button aria-label="Close modal" class="modal-close-btn absolute top-5 right-5 text-text-muted hover:text-text-primary transition-colors w-8 h-8 rounded-full bg-surface-container flex items-center justify-center" type="button">
+      <span class="material-symbols-outlined text-[20px]">close</span>
+    </button>
+    <div class="flex flex-col gap-space-xs pr-8">
+      <div class="flex items-center gap-space-xs">
+        <span class="w-2 h-2 rounded-full bg-primary-container animate-pulse"></span>
+        <span class="font-kicker text-kicker uppercase tracking-widest text-primary-container">Attendee Registration</span>
+      </div>
+      <h3 class="font-headline-lg text-headline-lg text-text-primary font-extrabold tracking-tight" id="reg-modal-title">Register for SHIFT 2026</h3>
+      <p class="font-body-sm text-body-sm text-secondary">
+        Saturday, 28 November 2026 · Limited to 150 executive and student delegates.
+      </p>
+    </div>
+    <form class="flex flex-col gap-space-md" id="register-form">
+      <div class="flex flex-col gap-space-xs">
+        <label class="font-label-code text-label-code uppercase text-text-muted" for="reg-name">Full Name *</label>
+        <input class="w-full bg-surface-container-lowest text-text-primary px-space-md py-space-sm rounded-lg font-body-sm text-body-sm focus:outline-none focus:ring-1 focus:ring-primary-container border border-surface-border" id="reg-name" name="full_name" placeholder="Executive / Student Name" required type="text"/>
+      </div>
+      <div class="flex flex-col gap-space-xs">
+        <label class="font-label-code text-label-code uppercase text-text-muted" for="reg-email">Corporate / University Email *</label>
+        <input class="w-full bg-surface-container-lowest text-text-primary px-space-md py-space-sm rounded-lg font-body-sm text-body-sm focus:outline-none focus:ring-1 focus:ring-primary-container border border-surface-border" id="reg-email" name="email" placeholder="name@company.com" required type="email"/>
+      </div>
+      <div class="flex flex-col gap-space-xs">
+        <label class="font-label-code text-label-code uppercase text-text-muted" for="reg-phone">Phone Number *</label>
+        <input class="w-full bg-surface-container-lowest text-text-primary px-space-md py-space-sm rounded-lg font-body-sm text-body-sm focus:outline-none focus:ring-1 focus:ring-primary-container border border-surface-border" id="reg-phone" name="phone" placeholder="+216 ..." required type="tel"/>
+      </div>
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-space-sm">
+        <div class="flex flex-col gap-space-xs">
+          <label class="font-label-code text-label-code uppercase text-text-muted" for="reg-university">University / Org</label>
+          <input class="w-full bg-surface-container-lowest text-text-primary px-space-md py-space-sm rounded-lg font-body-sm text-body-sm focus:outline-none focus:ring-1 focus:ring-primary-container border border-surface-border" id="reg-university" name="university" placeholder="e.g. INSAT / Company" type="text"/>
+        </div>
+        <div class="flex flex-col gap-space-xs">
+          <label class="font-label-code text-label-code uppercase text-text-muted" for="reg-faculty">Faculty / Title</label>
+          <input class="w-full bg-surface-container-lowest text-text-primary px-space-md py-space-sm rounded-lg font-body-sm text-body-sm focus:outline-none focus:ring-1 focus:ring-primary-container border border-surface-border" id="reg-faculty" name="faculty" placeholder="e.g. Computer Science" type="text"/>
+        </div>
+      </div>
+      <button class="w-full mt-space-xs px-space-md py-space-md rounded-full bg-primary-container text-on-primary font-headline-sm text-body-md font-bold hover:shadow-[0_0_24px_rgba(205,241,72,0.4)] transition-all flex items-center justify-center gap-space-sm" type="submit">
+        <span id="register-submit-label">Submit Registration</span>
+        <span class="material-symbols-outlined text-[18px]">send</span>
+      </button>
+      <p class="font-body-sm text-body-sm hidden text-center" id="register-form-message"></p>
+    </form>
+  </div>
+</div>
+
+<!-- 3. MODAL: REGISTRATION CONFIRMATION POPUP WINDOW (Post-Submission) -->
+<div class="fixed inset-0 z-[100] hidden items-center justify-center p-4 sm:p-6 bg-black/85 backdrop-blur-md transition-all" id="modal-reg-verification" role="dialog" aria-modal="true" aria-labelledby="reg-verif-title">
+  <div class="bg-surface-card border border-primary-container/40 rounded-2xl max-w-lg w-full p-6 sm:p-8 max-h-[90vh] overflow-y-auto shadow-[0_0_50px_rgba(205,241,72,0.2)] relative flex flex-col gap-space-md text-left">
+    <button aria-label="Close modal" class="modal-close-btn absolute top-5 right-5 text-text-muted hover:text-text-primary transition-colors w-8 h-8 rounded-full bg-surface-container flex items-center justify-center" type="button">
+      <span class="material-symbols-outlined text-[20px]">close</span>
+    </button>
+    <div class="flex items-center gap-space-md">
+      <div class="w-14 h-14 rounded-full bg-primary-container/20 border-2 border-primary-container flex items-center justify-center text-primary-container shrink-0 shadow-[0_0_20px_rgba(205,241,72,0.35)]">
+        <span class="material-symbols-outlined text-[32px]">check_circle</span>
+      </div>
+      <div class="flex flex-col">
+        <span class="font-label-badge text-label-badge uppercase tracking-wider text-primary-container">Registration Successful</span>
+        <h3 class="font-headline-lg text-headline-lg text-text-primary font-extrabold tracking-tight" id="reg-verif-title">You're Registered!</h3>
+      </div>
+    </div>
+    <p class="font-body-sm text-body-sm text-secondary leading-relaxed">
+      Thank you for registering! Your information has been successfully added to our database for <strong class="text-text-primary">SHIFT 2026</strong>.
+    </p>
+    <div class="bg-surface-container-lowest border border-surface-border rounded-xl p-space-md flex flex-col gap-space-sm">
+      <div class="flex items-center justify-between pb-space-xs border-b border-surface-border/60">
+        <span class="font-label-code text-label-code uppercase text-text-muted">Status</span>
+        <span class="font-label-badge text-label-badge text-primary-container bg-glow-lime px-space-sm py-space-xs rounded-full uppercase font-bold">Added to Database</span>
+      </div>
+      <div class="grid grid-cols-2 gap-space-sm text-left">
+        <div>
+          <span class="font-label-code text-label-code uppercase text-text-muted block">Delegate Name</span>
+          <span class="font-headline-sm text-body-md text-text-primary font-bold block" id="verif-name">—</span>
+        </div>
+        <div>
+          <span class="font-label-code text-label-code uppercase text-text-muted block">Registered Email</span>
+          <span class="font-body-sm text-body-sm text-secondary truncate block" id="verif-email">—</span>
+        </div>
+        <div>
+          <span class="font-label-code text-label-code uppercase text-text-muted block">Date</span>
+          <span class="font-body-sm text-body-sm text-text-primary block">28 November 2026</span>
+        </div>
+        <div>
+          <span class="font-label-code text-label-code uppercase text-text-muted block">Location</span>
+          <span class="font-body-sm text-body-sm text-text-primary block">Tunis, Tunisia</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- DIGITAL ATTENDEE PASS PREVIEW -->
+    <div class="flex flex-col gap-2">
+      <div class="flex items-center justify-between">
+        <span class="font-label-code text-label-code uppercase text-text-muted">Digital Attendee Pass</span>
+        <span class="font-label-badge text-[10px] text-primary-container bg-glow-lime px-2 py-0.5 rounded-full uppercase font-bold">Official Credential</span>
+      </div>
+      <!-- Pass Graphic Card -->
+      <div id="pass-card-container" class="relative overflow-hidden rounded-xl bg-gradient-to-br from-[#131b26] to-[#0b0e14] border-2 border-primary-container/40 p-4 shadow-[0_0_30px_rgba(205,241,72,0.15)] flex flex-col justify-between gap-4">
+        <div class="absolute -top-10 -right-10 w-32 h-32 bg-primary-container/10 rounded-full blur-2xl pointer-events-none"></div>
+        <div class="flex items-start justify-between">
+          <div class="flex flex-col">
+            <span class="font-headline-sm text-body-lg text-text-primary font-extrabold tracking-tight">SHIFT<span class="text-primary-container">.</span> 2026</span>
+            <span class="font-kicker text-[10px] text-primary-container uppercase tracking-widest">Executive AI Summit · AIESEC in Bardo</span>
+          </div>
+          <span class="font-label-code text-[11px] text-text-muted px-2 py-0.5 rounded bg-surface-container" id="pass-code">SHFT-DELEGATE</span>
+        </div>
+        <div class="flex flex-col gap-1 border-y border-surface-border/60 py-2.5">
+          <span class="font-kicker text-[10px] uppercase text-text-muted">Delegate Pass</span>
+          <span class="font-headline-sm text-headline-sm text-text-primary font-extrabold tracking-tight" id="pass-holder-name">Delegate Name</span>
+          <span class="font-body-sm text-body-sm text-primary-fixed-dim" id="pass-holder-org">Participant</span>
+        </div>
+        <div class="flex items-center justify-between text-xs text-text-muted font-label-code">
+          <span>28 NOV 2026 · TUNIS</span>
+          <span class="text-primary-container font-bold flex items-center gap-1">
+            <span class="material-symbols-outlined text-[14px]">verified</span>
+            CONFIRMED
+          </span>
+        </div>
+      </div>
+      <!-- Download Pass Button -->
+      <button id="download-pass-btn" type="button" class="w-full py-2.5 px-4 rounded-xl bg-surface-container border border-surface-border hover:border-primary-container/50 text-text-primary font-label-code text-xs uppercase flex items-center justify-center gap-2 hover:bg-surface-card-hover transition-all">
+        <span class="material-symbols-outlined text-[18px] text-primary-container">download</span>
+        <span>Download Delegate Pass (.PNG)</span>
+      </button>
+    </div>
+
+    <!-- CALENDAR & SOCIAL SHARE INTEGRATION -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 gap-space-sm pt-1">
+      <!-- Add to Calendar -->
+      <div class="flex flex-col gap-1.5 bg-surface-container-lowest border border-surface-border rounded-xl p-3">
+        <span class="font-label-code text-[11px] uppercase text-text-muted flex items-center gap-1">
+          <span class="material-symbols-outlined text-[14px] text-primary-container">calendar_month</span>
+          Add to Calendar
+        </span>
+        <div class="flex items-center gap-2">
+          <a id="cal-google-link" href="#" target="_blank" rel="noreferrer" class="flex-1 py-1.5 px-2 rounded-lg bg-surface-card hover:bg-surface-card-hover border border-surface-border text-center text-xs font-label-code text-text-primary transition-all">
+            Google
+          </a>
+          <button id="cal-ics-btn" type="button" class="flex-1 py-1.5 px-2 rounded-lg bg-surface-card hover:bg-surface-card-hover border border-surface-border text-center text-xs font-label-code text-text-primary transition-all">
+            Apple / .ICS
+          </button>
+        </div>
+      </div>
+      <!-- Social Share Kit -->
+      <div class="flex flex-col gap-1.5 bg-surface-container-lowest border border-surface-border rounded-xl p-3">
+        <span class="font-label-code text-[11px] uppercase text-text-muted flex items-center gap-1">
+          <span class="material-symbols-outlined text-[14px] text-primary-container">share</span>
+          Share With Network
+        </span>
+        <div class="flex items-center gap-2">
+          <a id="share-linkedin-btn" href="#" target="_blank" rel="noreferrer" class="flex-1 py-1.5 px-2 rounded-lg bg-surface-card hover:bg-surface-card-hover border border-surface-border text-center text-xs font-label-code text-text-primary transition-all flex items-center justify-center gap-1">
+            <span>LinkedIn</span>
+          </a>
+          <a id="share-x-btn" href="#" target="_blank" rel="noreferrer" class="flex-1 py-1.5 px-2 rounded-lg bg-surface-card hover:bg-surface-card-hover border border-surface-border text-center text-xs font-label-code text-text-primary transition-all">
+            X
+          </a>
+          <button id="share-copy-btn" type="button" class="py-1.5 px-2.5 rounded-lg bg-surface-card hover:bg-surface-card-hover border border-surface-border text-xs font-label-code text-text-primary transition-all flex items-center justify-center" title="Copy Event Link">
+            <span class="material-symbols-outlined text-[16px]">link</span>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div class="flex items-start gap-space-xs text-text-muted">
+      <span class="material-symbols-outlined text-[18px] text-primary-container shrink-0 mt-0.5">mark_email_read</span>
+      <p class="font-body-sm text-body-sm">
+        A confirmation email will be sent to your email address with event schedule details and instructions.
+      </p>
+    </div>
+    <button class="modal-close-btn w-full px-space-md py-space-md rounded-full bg-primary-container text-on-primary font-headline-sm text-body-md font-bold shadow-[0_0_20px_rgba(205,241,72,0.3)] hover:shadow-[0_0_28px_rgba(205,241,72,0.5)] transition-all flex items-center justify-center gap-space-sm mt-space-xs" type="button">
+      <span>Done</span>
+      <span class="material-symbols-outlined text-[18px]">check</span>
+    </button>
+  </div>
+</div>
+
+<!-- 3B. MODAL: SPEAKER DETAIL & SESSION ABSTRACT DRAWER -->
+<div class="fixed inset-0 z-[100] hidden items-center justify-center p-4 sm:p-6 bg-black/85 backdrop-blur-md transition-all" id="modal-speaker-detail" role="dialog" aria-modal="true" aria-labelledby="speaker-modal-name">
+  <div class="bg-surface-card border border-surface-border rounded-2xl max-w-xl w-full p-6 sm:p-8 max-h-[90vh] overflow-y-auto shadow-2xl relative flex flex-col gap-space-md text-left">
+    <button aria-label="Close modal" class="modal-close-btn absolute top-5 right-5 text-text-muted hover:text-text-primary transition-colors w-8 h-8 rounded-full bg-surface-container flex items-center justify-center" type="button">
+      <span class="material-symbols-outlined text-[20px]">close</span>
+    </button>
+    <div class="flex items-start gap-space-md pr-8">
+      <div id="speaker-modal-avatar" class="w-16 h-16 sm:w-20 sm:h-20 rounded-xl bg-surface-container-high border border-surface-border flex items-center justify-center text-primary-container font-headline-lg font-bold shrink-0 overflow-hidden shadow-inner">
+        <span class="material-symbols-outlined text-[36px]">person</span>
+      </div>
+      <div class="flex flex-col gap-0.5">
+        <span id="speaker-modal-badge" class="font-label-badge text-label-badge text-primary-container uppercase tracking-wider">Keynote Address</span>
+        <h3 id="speaker-modal-name" class="font-headline-lg text-headline-lg text-text-primary font-extrabold tracking-tight">Speaker Name</h3>
+        <p id="speaker-modal-role" class="font-body-sm text-body-sm text-secondary">Founder &amp; CEO</p>
+        <p id="speaker-modal-company" class="font-body-sm text-body-sm text-text-muted">Enterprise Scaleup</p>
+      </div>
+    </div>
+
+    <!-- Session Details Box -->
+    <div class="bg-surface-container-lowest border border-surface-border rounded-xl p-space-md flex flex-col gap-space-xs">
+      <div class="flex items-center justify-between pb-1 border-b border-surface-border/50">
+        <span class="font-label-code text-[11px] uppercase text-primary-container font-bold flex items-center gap-1">
+          <span class="material-symbols-outlined text-[14px]">event</span>
+          <span id="speaker-modal-time">10:15 – 11:00</span>
+        </span>
+        <span class="font-label-badge text-[10px] text-text-muted uppercase">Main Stage Auditorium</span>
+      </div>
+      <h4 id="speaker-modal-session" class="font-headline-sm text-body-lg text-text-primary font-bold pt-1">Session Title</h4>
+      <p id="speaker-modal-abstract" class="font-body-sm text-body-sm text-secondary leading-relaxed">
+        Session abstract details explaining the business cases, technical frameworks, and actionable executive insights covered in this session.
+      </p>
+    </div>
+
+    <!-- Speaker Bio Box -->
+    <div class="flex flex-col gap-space-xs">
+      <span class="font-label-code text-label-code uppercase text-text-muted">Executive Biography</span>
+      <p id="speaker-modal-bio" class="font-body-sm text-body-sm text-secondary leading-relaxed">
+        Full professional biography and industry background.
+      </p>
+    </div>
+
+    <!-- Social Connect & Action Buttons -->
+    <div class="flex items-center justify-between pt-2 border-t border-surface-border/60">
+      <div class="flex items-center gap-space-sm" id="speaker-modal-socials">
+        <a id="speaker-modal-linkedin" href="#" target="_blank" rel="noreferrer" class="w-9 h-9 rounded-full bg-surface-container hover:bg-primary-container hover:text-on-primary transition-colors flex items-center justify-center text-text-muted">
+          <span class="material-symbols-outlined text-[18px]">share</span>
+        </a>
+      </div>
+      <button class="modal-close-btn px-4 py-2 rounded-full bg-surface-container text-text-primary font-label-code text-xs uppercase hover:bg-surface-container-high transition-colors" type="button">
+        Close
+      </button>
+    </div>
+  </div>
+</div>
+
+<!-- 4. MODAL: BECOME A PARTNER APPLICATION FORM -->
+<div class="fixed inset-0 z-[100] hidden items-center justify-center p-4 sm:p-6 bg-black/80 backdrop-blur-md transition-all" id="modal-partner-form" role="dialog" aria-modal="true" aria-labelledby="partner-modal-title">
+  <div class="bg-surface-card border border-surface-border rounded-2xl max-w-lg w-full p-6 sm:p-8 max-h-[90vh] overflow-y-auto shadow-2xl relative flex flex-col gap-space-md">
+    <button aria-label="Close modal" class="modal-close-btn absolute top-5 right-5 text-text-muted hover:text-text-primary transition-colors w-8 h-8 rounded-full bg-surface-container flex items-center justify-center" type="button">
+      <span class="material-symbols-outlined text-[20px]">close</span>
+    </button>
+    <div class="flex flex-col gap-space-xs pr-8">
+      <span class="font-kicker text-kicker uppercase tracking-widest text-primary-container">Corporate Partnership</span>
+      <h3 class="font-headline-lg text-headline-lg text-text-primary font-extrabold tracking-tight" id="partner-modal-title">Apply as a Partner</h3>
+      <p class="font-body-sm text-body-sm text-secondary">
+        Connect your enterprise with leading business executives and premier engineering talent.
+      </p>
+    </div>
+    <form class="flex flex-col gap-space-md" id="partner-form">
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-space-sm">
+        <div class="flex flex-col gap-space-xs">
+          <label class="font-label-code text-label-code uppercase text-text-muted" for="partner-company">Company Name *</label>
+          <input class="w-full bg-surface-container-lowest text-text-primary px-space-md py-space-sm rounded-lg font-body-sm text-body-sm focus:outline-none focus:ring-1 focus:ring-primary-container border border-surface-border" id="partner-company" name="company_name" placeholder="Acme Corp" required type="text"/>
+        </div>
+        <div class="flex flex-col gap-space-xs">
+          <label class="font-label-code text-label-code uppercase text-text-muted" for="partner-contact">Contact Person *</label>
+          <input class="w-full bg-surface-container-lowest text-text-primary px-space-md py-space-sm rounded-lg font-body-sm text-body-sm focus:outline-none focus:ring-1 focus:ring-primary-container border border-surface-border" id="partner-contact" name="contact_name" placeholder="Full name" required type="text"/>
+        </div>
+      </div>
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-space-sm">
+        <div class="flex flex-col gap-space-xs">
+          <label class="font-label-code text-label-code uppercase text-text-muted" for="partner-email">Corporate Email *</label>
+          <input class="w-full bg-surface-container-lowest text-text-primary px-space-md py-space-sm rounded-lg font-body-sm text-body-sm focus:outline-none focus:ring-1 focus:ring-primary-container border border-surface-border" id="partner-email" name="email" placeholder="contact@company.com" required type="email"/>
+        </div>
+        <div class="flex flex-col gap-space-xs">
+          <label class="font-label-code text-label-code uppercase text-text-muted" for="partner-phone">Phone Number</label>
+          <input class="w-full bg-surface-container-lowest text-text-primary px-space-md py-space-sm rounded-lg font-body-sm text-body-sm focus:outline-none focus:ring-1 focus:ring-primary-container border border-surface-border" id="partner-phone" name="phone" placeholder="+216 ..." type="tel"/>
+        </div>
+      </div>
+      <div class="flex flex-col gap-space-xs">
+        <label class="font-label-code text-label-code uppercase text-text-muted" for="partner-message">Partnership Message</label>
+        <textarea class="w-full bg-surface-container-lowest text-text-primary px-space-md py-space-sm rounded-lg font-body-sm text-body-sm focus:outline-none focus:ring-1 focus:ring-primary-container border border-surface-border" id="partner-message" name="message" placeholder="Tell us about your sponsorship objectives, exhibition interest, or talent recruiting goals..." rows="3"></textarea>
+      </div>
+      <button class="w-full mt-space-xs px-space-md py-space-md rounded-full bg-primary-container text-on-primary font-headline-sm text-body-md font-bold hover:shadow-[0_0_24px_rgba(205,241,72,0.4)] transition-all flex items-center justify-center gap-space-sm" type="submit">
+        <span>Submit Application</span>
+        <span class="material-symbols-outlined text-[18px]">send</span>
+      </button>
+      <p class="font-body-sm text-body-sm hidden text-center" id="partner-form-message"></p>
+    </form>
+  </div>
+</div>
+
+<!-- 5. MODAL: PARTNER VERIFICATION POPUP WINDOW (Post-Submission) -->
+<div class="fixed inset-0 z-[100] hidden items-center justify-center p-4 sm:p-6 bg-black/85 backdrop-blur-md transition-all" id="modal-partner-verification" role="dialog" aria-modal="true" aria-labelledby="partner-verif-title">
+  <div class="bg-surface-card border border-primary-container/40 rounded-2xl max-w-lg w-full p-6 sm:p-8 max-h-[90vh] overflow-y-auto shadow-[0_0_50px_rgba(205,241,72,0.2)] relative flex flex-col gap-space-md text-left">
+    <button aria-label="Close modal" class="modal-close-btn absolute top-5 right-5 text-text-muted hover:text-text-primary transition-colors w-8 h-8 rounded-full bg-surface-container flex items-center justify-center" type="button">
+      <span class="material-symbols-outlined text-[20px]">close</span>
+    </button>
+    <div class="flex items-center gap-space-md">
+      <div class="w-14 h-14 rounded-full bg-primary-container/20 border-2 border-primary-container flex items-center justify-center text-primary-container shrink-0 shadow-[0_0_20px_rgba(205,241,72,0.35)]">
+        <span class="material-symbols-outlined text-[32px]">handshake</span>
+      </div>
+      <div class="flex flex-col">
+        <span class="font-label-badge text-label-badge uppercase tracking-wider text-primary-container">Inquiry Verified</span>
+        <h3 class="font-headline-lg text-headline-lg text-text-primary font-extrabold tracking-tight" id="partner-verif-title">Partner Request Received</h3>
+      </div>
+    </div>
+    <p class="font-body-sm text-body-sm text-secondary leading-relaxed">
+      Thank you for your interest in partnering with <strong class="text-text-primary">SHIFT 2026</strong>. Our organizing team has logged your corporate inquiry.
+    </p>
+    <div class="bg-surface-container-lowest border border-surface-border rounded-xl p-space-md flex flex-col gap-space-sm">
+      <div class="grid grid-cols-2 gap-space-sm">
+        <div>
+          <span class="font-label-code text-label-code uppercase text-text-muted block">Company</span>
+          <span class="font-headline-sm text-body-md text-text-primary font-bold block" id="verif-partner-company">—</span>
+        </div>
+        <div>
+          <span class="font-label-code text-label-code uppercase text-text-muted block">Contact</span>
+          <span class="font-body-sm text-body-sm text-secondary block" id="verif-partner-contact">—</span>
+        </div>
+      </div>
+      <div class="pt-space-xs border-t border-surface-border/60">
+        <span class="font-label-code text-label-code uppercase text-text-muted block">Status</span>
+        <span class="font-label-badge text-label-badge text-primary-container bg-glow-lime px-space-sm py-space-xs rounded-full uppercase font-bold">Under Review by Partnerships Lead</span>
+      </div>
+    </div>
+    <p class="font-body-sm text-body-sm text-text-muted">
+      Our team will review your requirements and reach out via email with the full partner prospectus and meeting schedule within 48 business hours.
+    </p>
+    <button class="modal-close-btn w-full px-space-md py-space-md rounded-full bg-primary-container text-on-primary font-headline-sm text-body-md font-bold shadow-[0_0_20px_rgba(205,241,72,0.3)] hover:shadow-[0_0_28px_rgba(205,241,72,0.5)] transition-all flex items-center justify-center gap-space-sm mt-space-xs" type="button">
+      <span>Close</span>
+      <span class="material-symbols-outlined text-[18px]">check</span>
+    </button>
+  </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="config.js"></script>
+<script src="site.js"></script>
+</body></html>
