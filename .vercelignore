@@ -1,0 +1,12 @@
+# Supabase Edge Functions (uses Deno runtime for Supabase CLI, not Vercel)
+shift-website/supabase
+shift-website/supabase/functions
+supabase
+supabase/functions
+*.ts
+
+# Dev and system files
+.git
+.env
+.env.local
+node_modules

@@ -1,0 +1,42 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "framework": null,
+  "rewrites": [
+    {
+      "source": "/api/(.*)",
+      "destination": "/api/index.js"
+    },
+    {
+      "source": "/admin.html",
+      "destination": "/shift-website/admin.html"
+    },
+    {
+      "source": "/admin.js",
+      "destination": "/shift-website/admin.js"
+    },
+    {
+      "source": "/site.js",
+      "destination": "/shift-website/site.js"
+    },
+    {
+      "source": "/config.js",
+      "destination": "/shift-website/config.js"
+    },
+    {
+      "source": "/data/(.*)",
+      "destination": "/shift-website/data/$1"
+    },
+    {
+      "source": "/shift-website/(.*)",
+      "destination": "/shift-website/$1"
+    },
+    {
+      "source": "/",
+      "destination": "/shift-website/index.html"
+    },
+    {
+      "source": "/(.*)",
+      "destination": "/shift-website/$1"
+    }
+  ]
+}

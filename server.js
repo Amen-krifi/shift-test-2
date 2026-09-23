@@ -105,6 +105,11 @@ app.use((req, res) => {
   res.sendFile(path.join(staticDir, 'index.html'));
 });
 
-app.listen(PORT, '0.0.0.0', () => {
-  console.log(`Server listening on http://0.0.0.0:${PORT}`);
-});
+// Start standalone server when executed directly (local dev / AI Studio preview)
+if (process.env.VERCEL !== '1') {
+  app.listen(PORT, '0.0.0.0', () => {
+    console.log(`Server listening on http://0.0.0.0:${PORT}`);
+  });
+}
+
+export default app;
